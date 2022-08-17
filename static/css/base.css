@@ -59,6 +59,15 @@ body {
     background: black;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: turquoise;
+    z-index: -1;
+}
 /* Media Queries */
 
 /* Slightly larger container on x1 screens */
