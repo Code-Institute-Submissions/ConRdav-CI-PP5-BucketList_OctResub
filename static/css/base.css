@@ -55,6 +55,10 @@ body {
     border: 1px solid black;
 }
 
+.bg-black {
+    background: black;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on x1 screens */
