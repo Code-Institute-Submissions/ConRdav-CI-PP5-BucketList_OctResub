@@ -15,9 +15,9 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
-                {% if product.image %}
-                    <a href="{{ adventure.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ adventure.img.url }}" alt="{{ adventure.name }}">
+                {% if adventure.image %}
+                    <a href="{{ adventure.image }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
                     </a>
                     {% else %}
                     <a href="">

@@ -11,7 +11,7 @@
 
 {% block content %} 
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Adventures</h2>
@@ -24,9 +24,9 @@
                     {% for adventure in adventures %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if product.image %}
+                                {% if adventure.image %}
                                 <a href="{% url 'adventure_detail' adventure.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ adventure.img.url }}" alt="{{ adventure.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'adventure_detail' adventure.id %}">

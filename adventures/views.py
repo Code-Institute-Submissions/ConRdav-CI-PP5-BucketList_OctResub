@@ -23,4 +23,4 @@ def adventure_detail(request, adventure_id):
         'adventure': adventure,
     }
 
-    return render(request, 'adventures/adventures.html', context)
+    return render(request, 'adventures/adventure_detail.html', context)
