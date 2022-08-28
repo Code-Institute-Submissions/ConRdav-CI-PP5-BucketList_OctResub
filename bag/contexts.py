@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 
-def bag_content(request):
+def bag_contents(request):
     """ A method to work out the shopping bag total """
     bag_items = []
     total = 0
