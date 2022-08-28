@@ -6,13 +6,13 @@
                 Adventures
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="adventures-link">
-                <a href="" class="dropdown-item">Africa</a>
-                <a href="" class="dropdown-item">Asia</a>
-                <a href="" class="dropdown-item">Europe</a>
-                <a href="" class="dropdown-item">North America</a>
-                <a href="" class="dropdown-item">Oceania</a>
-                <a href="" class="dropdown-item">South America</a>
-                <a href="{% url 'adventures' %}"" class="dropdown-item">All Adventures</a>
+                <a href="{% url 'adventures' %}?category=africa" class="dropdown-item">Africa</a>
+                <a href="{% url 'adventures' %}?category=asia" class="dropdown-item">Asia</a>
+                <a href="{% url 'adventures' %}?category=europe" class="dropdown-item">Europe</a>
+                <a href="{% url 'adventures' %}?category=north_america" class="dropdown-item">North America</a>
+                <a href="{% url 'adventures' %}?category=oceania" class="dropdown-item">Oceania</a>
+                <a href="{% url 'adventures' %}?category=south_america" class="dropdown-item">South America</a>
+                <a href="{% url 'adventures' %}?category=africa,asia,europe,north_america,oceania,south_america" class="dropdown-item">All Adventures</a>
             </div>
         </li>
 
