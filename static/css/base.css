@@ -82,6 +82,12 @@ body {
     background: turquoise;
     z-index: -1;
 }
+
+.update-link,
+.remove-link {
+    cursor: pointer;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on x1 screens */
