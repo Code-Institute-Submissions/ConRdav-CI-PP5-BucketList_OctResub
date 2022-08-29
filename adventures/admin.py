@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Adventure, Category
+from .models import Adventure, Category, Excursion
 
 # Register your models here.
 
@@ -19,6 +19,14 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+class ExcursionAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'price',
+        'image',
+    )
+
 admin.site.register(Adventure, AdventureAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Excursion, ExcursionAdmin)
 

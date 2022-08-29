@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'adventures',
     'bag',
     'checkout',
+    'testimonials',
 
     # Addons
     'crispy_forms',

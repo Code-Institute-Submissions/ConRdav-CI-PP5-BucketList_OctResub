@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Adventure, Category
+from .models import Adventure, Category, Excursion
 
 # Create your views here.
 
@@ -24,13 +24,15 @@ def all_adventures(request):
     return render(request, 'adventures/adventures.html', context)
 
 
-def adventure_detail(request, adventure_id):
+def adventure_detail(request, adventure_id, category):
     """ A view to show adventure details """
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
+    excursion = get_object_or_404(Excursion, fk=category)
 
     context = {
         'adventure': adventure,
+        'excursion': excursion,
     }
 
     return render(request, 'adventures/adventure_detail.html', context)
