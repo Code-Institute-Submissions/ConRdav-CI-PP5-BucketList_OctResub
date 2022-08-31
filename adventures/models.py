@@ -12,13 +12,26 @@ class Category(models.Model):
         return self.name
 
 
+class Country(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Countries'
+
+    name = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.name
+
+
 class Adventure(models.Model):
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    country = models.ForeignKey('Country', null=True, blank=True,
+                                on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    country = models.CharField(max_length=254)
     continent = models.CharField(max_length=254)
     theme = models.CharField(max_length=254)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
@@ -30,7 +43,8 @@ class Adventure(models.Model):
 
 class Excursion(models.Model):
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    country = models.ForeignKey('Country', null=True, blank=True,
+                                on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -39,5 +53,3 @@ class Excursion(models.Model):
 
     def __str__(self):
         return self.name
-
-

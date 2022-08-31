@@ -24,11 +24,12 @@ def all_adventures(request):
     return render(request, 'adventures/adventures.html', context)
 
 
-def adventure_detail(request, adventure_id, category):
+def adventure_detail(request, adventure_id):
     """ A view to show adventure details """
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
-    excursion = get_object_or_404(Excursion, fk=category)
+    categories = adventure.category
+    excursion = Excursion.objects.filter(category=categories)
 
     context = {
         'adventure': adventure,
