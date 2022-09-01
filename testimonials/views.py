@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Testimonial
 
 # Create your views here.
 
@@ -6,4 +7,10 @@ from django.shortcuts import render
 def view_testimonials(request):
     """ A view to return the shopping bag """
 
-    return render(request, 'testimonials/testimonials.html')
+    testimonials = Testimonial.objects.all()
+
+    context = {
+        'testimonials': testimonials,
+    }
+
+    return render(request, 'testimonials/testimonials.html', context)
