@@ -21,7 +21,7 @@ class Testimonial(models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE,
                              related_name='blog_posts')
-    pub_date = models.DateTimeField(auto_add_now=True,
+    pub_date = models.DateTimeField(auto_now=True,
                                     verbose_name='Publication Date')
     comment = models.TextField(max_length=1024)
     value = models.IntegerField(choices=RATING_CHOICES, default=1)

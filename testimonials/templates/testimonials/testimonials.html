@@ -17,29 +17,24 @@
                 <h2 class="logo-font">Testimonials</h2>
                 <hr class="w-50 mb-1">
             </div>
+        </div>
         <div class="row">
-            <div class="adventure-container col-10 offset-1">
+            <div class="adventure-container text-center algin-center col-10">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
-                    {% for adventure in adventures %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    {% for testimonial in testimonials %}
+                        <div class="card-columns">
                             <div class="card h-100 border-0">
-                                {% if adventure.image %}
-                                <a href="{% url 'adventure_detail' adventure.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'adventure_detail' adventure.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
-                                </a>
-                                {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ adventure.name }}</p>
+                                    <p class="mb-0 text-uppercase">{{ testimonial.country }}</p>
+                                    <p class="mb-0">{{ testimonial.user}}</p>
+                                    <p class="mb-0">{{ testimonial.pub_date }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">{{ adventure.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">{{ testimonial.comment }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">{{ testimonial.value }}</p>
                                         </div>
                                     </div>
                                 </div>
