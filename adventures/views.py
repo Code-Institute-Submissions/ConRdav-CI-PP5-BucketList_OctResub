@@ -39,19 +39,27 @@ def adventure_detail(request, adventure_id):
 def excursion_detail(request, country):
     """ A view to show excursion details """
 
-    # excursions = get_object_or_404(Excursion, fk=country)
+    # excursions = get_object_or_404(Excursion, country=country)
 
     excursions = Excursion.objects.all()
-    countries = None
-
-    if request.GET:
-        if 'country' in request.GET:
-            countries = request.GET['country'].split(',')
-            excursions = excursions.filter(country__name__in=countries)
-            countries = Country.objects.filter(name__in=countries)
+    excursions = excursions.filter(country=country)
 
     context = {
-        'excursions': excursions,
+        'excursions': excursions
     }
+
+    # excursions = Excursion.objects.all()
+    # countries = None
+
+    # if request.GET:
+    #     if 'country' in request.GET:
+    #         countries = request.GET['country'].split(',')
+    #         excursions = excursions.filter(country__name__in=countries)
+    #         countries = Country.objects.filter(name__in=countries)
+
+    # context = {
+    #     'excursions': excursions,
+    #     'current_countries': countries,
+    # }
 
     return render(request, 'adventures/excursion_detail.html', context)
