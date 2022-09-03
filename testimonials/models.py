@@ -7,7 +7,7 @@ from adventures.models import Country
 
 class Testimonial(models.Model):
     """
-    Model for blog posts and all the fields included
+    Model for the testimonial posts 
     """
 
     RATING_CHOICES = (
