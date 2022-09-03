@@ -36,8 +36,10 @@ def adventure_detail(request, adventure_id):
     return render(request, 'adventures/adventure_detail.html', context)
 
 
-def excursion_detail(request):
+def excursion_detail(request, country):
     """ A view to show excursion details """
+
+    # excursions = get_object_or_404(Excursion, fk=country)
 
     excursions = Excursion.objects.all()
     countries = None
