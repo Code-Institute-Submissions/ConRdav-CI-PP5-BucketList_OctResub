@@ -19,11 +19,17 @@
                 Contact Us
             </h1>
             <div class="'my-5">
+                {% if posted %}
+                <div class="alert alert-success" role="alert">
+                    Your enquiry has been sent successfully!
+                </div>
+                {% else %}
                 <form action="" method="post">
                     {% csrf_token %}
                     {{ form }}
                     <input type="submit" value="Submit">
                  </form>
+                 {% endif %}
             </div>
         </div>
     </div>
