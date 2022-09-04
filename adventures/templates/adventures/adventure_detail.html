@@ -65,6 +65,7 @@
                             </div>
                             <div class="col-12">
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit"  formaction="{% url 'add_to_wishlist' adventure.id %}" formmethod="POST" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Wishlist">
                                 <br>
                                 <a href="{% url 'adventures' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -79,6 +80,7 @@
                                     </span>
                                 </a>
                             </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </div>
