@@ -5,9 +5,9 @@ html {
 body {
     background: url('/media/hero-img.jpeg') no-repeat center center fixed;
     background-size: cover;
-    background-color: aqua;
+    background-color: #EEE2DC;
     height: calc(100vh - 164px);
-    color: black;
+    color: #AC3B61;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -21,10 +21,20 @@ body {
 
 .logo-font {
     text-transform: capitalize;
+    color: #AC3B61;
+}
+
+.bag {
+    background-color: #AC3B61;
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+.main-nav {
+    background-color: #EDC7B7;
+    color: #AC3B61;
 }
 
 .adventure-btn {
@@ -79,7 +89,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: turquoise;
+    background:#EEE2DC;
     z-index: -1;
 }
 
