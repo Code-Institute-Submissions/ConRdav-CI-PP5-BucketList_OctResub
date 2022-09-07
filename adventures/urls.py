@@ -8,4 +8,5 @@ urlpatterns = [
     path('excursions/<str:country>/', views.excursion_detail,
          name='excursion_detail'),
     path('add/', views.add_adventure, name='add_adventure'),
+    path('edit/<int:adventure_id>/', views.edit_adventure, name='edit_adventure'),
 ]

@@ -74,3 +74,27 @@ def add_adventure(request):
     }
 
     return render(request, template, context)
+
+
+def edit_adventure(request, adventure_id):
+    """ Edit an adventure in the store """
+    adventure = get_object_or_404(Adventure, pk=adventure_id)
+    if request.method =='POST':
+        form = AdventureForm(request.POST, request.FILES, instance=adventure)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated adventure!')
+            return redirect(reverse('adventure_detail', args=[adventure.id]))
+        else:
+            messages.error(request, 'Failed to update adventure. please ensure the form is valid.')
+    else:
+        form = AdventureForm(instance=adventure)
+        messages.info(request, f'You are editing {adventure.name}')
+
+    template = 'adventures/edit_adventure.html'
+    context = {
+        'form': form,
+        'adventure': adventure
+    }
+
+    return render(request, template, context)
