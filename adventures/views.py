@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Adventure, Category, Excursion
 from .forms import AdventureForm
@@ -55,8 +56,13 @@ def excursion_detail(request, country):
     return render(request, 'adventures/excursion_detail.html', context)
 
 
+@login_required
 def add_adventure(request):
     """ Add an adventure to the store """
+    if not user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('index'))
+
     if request.method == 'POST':
         form = AdventureForm(request.POST, request.FILES)
         if form.is_valid():
@@ -76,8 +82,13 @@ def add_adventure(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_adventure(request, adventure_id):
     """ Edit an adventure in the store """
+    if not user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('index'))
+
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     if request.method =='POST':
         form = AdventureForm(request.POST, request.FILES, instance=adventure)
@@ -100,8 +111,13 @@ def edit_adventure(request, adventure_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_adventure(request, adventure_id):
     """ Delete an adventure in the store """
+    if not user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('index'))
+
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     adventure.delete()
     messages.success(request, 'Adventure deleted!')
