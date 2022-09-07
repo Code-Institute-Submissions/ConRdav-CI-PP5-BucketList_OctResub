@@ -59,16 +59,16 @@ def excursion_detail(request, country):
 @login_required
 def add_adventure(request):
     """ Add an adventure to the store """
-    if not user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('index'))
+    # if not user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('index'))
 
     if request.method == 'POST':
         form = AdventureForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added adventure!')
-            return redirect (reverse('adventure_detail', args=[adventure_id]))
+            return redirect ('adventures')
         else:
             messages.error(request, 'Failed to add adventure. Please ensure the form is valid.')
     else:
@@ -84,10 +84,10 @@ def add_adventure(request):
 
 @login_required
 def edit_adventure(request, adventure_id):
-    """ Edit an adventure in the store """
-    if not user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('index'))
+    # """ Edit an adventure in the store """
+    # if not user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('index'))
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     if request.method =='POST':
@@ -114,9 +114,9 @@ def edit_adventure(request, adventure_id):
 @login_required
 def delete_adventure(request, adventure_id):
     """ Delete an adventure in the store """
-    if not user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('index'))
+    # if not user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('index'))
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     adventure.delete()
