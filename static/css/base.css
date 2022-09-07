@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/hero-img.jpeg') no-repeat center center fixed;
+    background: linear-gradient(rgba(246, 244, 244, 0.801), rgba(0, 0, 0, 0)),url('/media/hero-img.jpeg') no-repeat center center fixed;
     background-size: cover;
     background-color: #EEE2DC;
     height: calc(100vh - 164px);
@@ -73,14 +73,6 @@ body {
 
 .text-black {
     color: black;
-}
-
-.border-black {
-    border: 1px solid black;
-}
-
-.bg-black {
-    background: black;
 }
 
 .overlay {

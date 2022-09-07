@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         {% endblock %}
 
     {% block extra_css %}
@@ -41,11 +42,25 @@
       <div id="topnav" class="main-nav row  pt-lg-2 d-none d-lg-flex ">
         <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'index' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font my-0">BucketList<i class="fab fa-bitbucket fa-lg"></i> </h2>
+            <h2 class="logo-font my-0">BucketList <i class="fa-solid fa-bucket"></i></h2>
           </a>
         </div>
         <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            {% if user.is_superuser %}
+              <li class="list-inline-item dropdown">
+              <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div><i class="fas fa-solid fa-lock fa-lg" ></i></div>
+                  <p class="my-0">Admin</p>
+                </div>
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="admin-options">
+                    <a href="{% url 'add_adventure' %}" class="dropdown-item"> Add Adventure</a>
+                    <a href="{% url 'add_excursion' %}" class="dropdown-item"> Add Excursion</a> 
+              </div>             
+            </li>
+            {% endif %}
             <li class="list-inline-item dropdown">
               <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
@@ -55,9 +70,6 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if user.is_authenticated %}
-                  {% if user.is_superuser %}
-                    <a href="{% url 'add_adventure' %}" class="dropdown-item"> Adventure Management</a>
-                  {% endif %}
                   <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                   {% else %}
@@ -83,7 +95,7 @@
           </ul>
         </div>
       </div>
-      <div class="row bg-black text-white">
+      <div class="row main-nav text-white">
         <nav class="navbar navbar-expand-lg nabar-light w-100">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-labelledby="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
