@@ -55,6 +55,27 @@ def excursion_detail(request, country):
 
     return render(request, 'adventures/excursion_detail.html', context)
 
+def add_category(request):
+    """ Add a category to the store """
+    
+    if request.method == 'POST':
+        form = AdventureForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added adventure!')
+            return redirect('adventures')
+        else:
+            messages.error(request, 'Failed to add adventure. Please ensure the form is valid.')
+    else:
+        form = AdventureForm()
+
+    template = 'adventures/add_adventure.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
 
 @login_required
 def add_adventure(request):
