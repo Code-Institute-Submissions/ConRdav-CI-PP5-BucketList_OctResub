@@ -1,5 +1,5 @@
 from django import forms
-from .models import Adventure, Category, Country, Excursion
+from .models import Adventure, Excursion
 
 
 class AdventureForm(forms.ModelForm):
@@ -8,17 +8,6 @@ class AdventureForm(forms.ModelForm):
         model = Adventure
         fields = '__all__'
 
-class CategoryForm(forms.ModelForm):
-
-    class Meta:
-        model = Category
-        fields = '__all__'  
-
-class CountryForm(forms.ModelForm):
-
-    class Meta:
-        model = Country
-        fields = '__all__'
 
 class ExcursionForm(forms.ModelForm):
 

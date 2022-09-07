@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Adventure, Category, Excursion
-from .forms import AdventureForm
+from .models import Adventure, Category, Excursion, Country
+from .forms import AdventureForm, ExcursionForm
 
 # Create your views here.
 
@@ -55,21 +55,23 @@ def excursion_detail(request, country):
 
     return render(request, 'adventures/excursion_detail.html', context)
 
-def add_category(request):
-    """ Add a category to the store """
-    
+
+@login_required
+def add_excursion(request):
+    """ Add an excursion to the store """
+
     if request.method == 'POST':
-        form = AdventureForm(request.POST, request.FILES)
+        form = ExcursionForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully added adventure!')
+            messages.success(request, 'Successfully added an excursion!')
             return redirect('adventures')
         else:
-            messages.error(request, 'Failed to add adventure. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add an excursion. Please ensure the form is valid.')
     else:
-        form = AdventureForm()
+        form = ExcursionForm()
 
-    template = 'adventures/add_adventure.html'
+    template = 'adventures/add_excursion.html'
     context = {
         'form': form,
     }
@@ -111,7 +113,7 @@ def edit_adventure(request, adventure_id):
     #     return redirect(reverse('index'))
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
-    if request.method =='POST':
+    if request.method == 'POST':
         form = AdventureForm(request.POST, request.FILES, instance=adventure)
         if form.is_valid():
             form.save()

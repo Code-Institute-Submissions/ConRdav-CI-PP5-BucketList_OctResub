@@ -8,6 +8,10 @@ urlpatterns = [
     path('excursions/<str:country>/', views.excursion_detail,
          name='excursion_detail'),
     path('add/', views.add_adventure, name='add_adventure'),
-    path('edit/<int:adventure_id>/', views.edit_adventure, name='edit_adventure'),
-    path('delete/<int:adventure_id>/', views.delete_adventure, name='delete_adventure')
+    path('edit/<int:adventure_id>/', views.edit_adventure,
+         name='edit_adventure'),
+    path('delete/<int:adventure_id>/', views.delete_adventure,
+         name='delete_adventure'),
+    path('add_excursion/', views.add_excursion, name='add_excursion'),
+
 ]
