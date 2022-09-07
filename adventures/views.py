@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Adventure, Category, Excursion, Country
+from .forms import AdventureForm
 
 # Create your views here.
 
@@ -50,3 +51,14 @@ def excursion_detail(request, country):
     }
 
     return render(request, 'adventures/excursion_detail.html', context)
+
+
+def add_adventure(request):
+    """ Add an adventure to the store """
+    form = AdventureForm()
+    template = 'adventures/add_adventure.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
