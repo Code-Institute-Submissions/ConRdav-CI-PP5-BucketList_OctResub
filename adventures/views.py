@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+
 from .models import Adventure, Category, Excursion, Country
 from .forms import AdventureForm
 
@@ -62,7 +64,7 @@ def add_adventure(request):
             messages.success(request, 'Successfully added adventure!')
             return redirect (reverse('add_adventure'))
         else:
-            message.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add adventure. Please ensure the form is valid.')
     else:
         form = AdventureForm()
 
