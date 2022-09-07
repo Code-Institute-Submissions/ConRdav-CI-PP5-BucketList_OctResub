@@ -55,7 +55,17 @@ def excursion_detail(request, country):
 
 def add_adventure(request):
     """ Add an adventure to the store """
-    form = AdventureForm()
+    if request.method == 'POST':
+        form = AdventureForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added adventure!')
+            return redirect (reverse('add_adventure'))
+        else:
+            message.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = AdventureForm()
+
     template = 'adventures/add_adventure.html'
     context = {
         'form': form,
