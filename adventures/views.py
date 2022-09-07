@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 
-from .models import Adventure, Category, Excursion, Country
+from .models import Adventure, Category, Excursion
 from .forms import AdventureForm
 
 # Create your views here.
@@ -62,7 +62,7 @@ def add_adventure(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added adventure!')
-            return redirect (reverse('add_adventure'))
+            return redirect (reverse('adventure_detail', args=[adventure_id]))
         else:
             messages.error(request, 'Failed to add adventure. Please ensure the form is valid.')
     else:
@@ -98,3 +98,11 @@ def edit_adventure(request, adventure_id):
     }
 
     return render(request, template, context)
+
+
+def delete_adventure(request, adventure_id):
+    """ Delete an adventure in the store """
+    adventure = get_object_or_404(Adventure, pk=adventure_id)
+    adventure.delete()
+    messages.success(request, 'Adventure deleted!')
+    return redirect(reverse('adventures'))

@@ -33,7 +33,12 @@
                 <p class="mb-0">{{ adventure.continent }}</p>
                 <p class="mb-0">{{ adventure.theme }}</p>
                 <p class="mt-3">{{ adventure.description }}</p>
-                
+                {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_adventure' adventure.id %}">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_adventure' adventure.id %}">Delete</a>
+                    </small>
+                {% endif %}
                 <form action="{% url 'add_to_bag' adventure.id %}" class="form" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
