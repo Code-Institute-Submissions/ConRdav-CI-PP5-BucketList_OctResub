@@ -28,6 +28,11 @@
                 {% if excursion %} 
                 <p class="mb-0">{{ excursion.name }}</p>
                 <p class="mt-3">{{ excursion.description }}</p>
+                {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a class="text-danger" href="{% url 'delete_excursion' country=adventure.country %}">Delete</a>
+                    </small>
+                {% endif %}
                 {% else %}
                 <p>Error: there are no excursions to show</p>
                 {% endif %}
@@ -50,9 +55,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-{% include 'adventures/includes/quantity_input_script.html' %}
 {% endblock %}

@@ -57,29 +57,6 @@ def excursion_detail(request, country):
 
 
 @login_required
-def add_excursion(request):
-    """ Add an excursion to the store """
-
-    if request.method == 'POST':
-        form = ExcursionForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added an excursion!')
-            return redirect('adventures')
-        else:
-            messages.error(request, 'Failed to add an excursion. Please ensure the form is valid.')
-    else:
-        form = ExcursionForm()
-
-    template = 'adventures/add_excursion.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
 def add_adventure(request):
     """ Add an adventure to the store """
     # if not user.is_superuser:
@@ -144,4 +121,42 @@ def delete_adventure(request, adventure_id):
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     adventure.delete()
     messages.success(request, 'Adventure deleted!')
+    return redirect(reverse('adventures'))
+
+
+@login_required
+def add_excursion(request):
+    """ Add an excursion to the store """
+
+    if request.method == 'POST':
+        form = ExcursionForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added an excursion!')
+            return redirect('adventures')
+        else:
+            messages.error(request, 'Failed to add an excursion. Please ensure the form is valid.')
+    else:
+        form = ExcursionForm()
+
+    template = 'adventures/add_excursion.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_excursion(request, country):
+    """ Delete an adventure in the store """
+    # if not user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('index'))
+
+    excursions = Excursion.objects.all()
+    excursions = excursions.filter(country__name__contains=country)
+    adventure_id = request.session.get('adventure_id', None)
+    Excursion.delete()
+    messages.success(request, 'Excursion deleted!')
     return redirect(reverse('adventures'))

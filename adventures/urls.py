@@ -13,5 +13,7 @@ urlpatterns = [
     path('delete/<int:adventure_id>/', views.delete_adventure,
          name='delete_adventure'),
     path('add_excursion/', views.add_excursion, name='add_excursion'),
+    path('delete_excursion/<str:country>/', views.delete_excursion,
+         name='delete_excursion'),
 
 ]
