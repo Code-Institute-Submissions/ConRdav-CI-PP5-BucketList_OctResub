@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Adventure, Category, Excursion, Country
+from .models import Adventure, Continent, Excursion, Country
 
 # Register your models here.
 
 class AdventureAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'category',
+        'continent',
         'price',
         'country',
         'continent',
@@ -14,7 +14,7 @@ class AdventureAdmin(admin.ModelAdmin):
         'image',
     )
 
-class CategoryAdmin(admin.ModelAdmin):
+class ContinentAdmin(admin.ModelAdmin):
     list_display = (
         'name',
     )
@@ -32,7 +32,7 @@ class ExcursionAdmin(admin.ModelAdmin):
     )
 
 admin.site.register(Adventure, AdventureAdmin)
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(Continent, ContinentAdmin)
 admin.site.register(Excursion, ExcursionAdmin)
 admin.site.register(Country, CountryAdmin)
 

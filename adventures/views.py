@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Adventure, Category, Excursion, Country
+from .models import Adventure, Continent, Excursion, Country
 from .forms import AdventureForm, ExcursionForm
 
 # Create your views here.
@@ -12,17 +12,17 @@ def all_adventures(request):
     """ A view to show all adventures, including sorting and search queries """
 
     adventures = Adventure.objects.all()
-    categories = None
+    continents = None
 
     if request.GET:
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            adventures = adventures.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+        if 'continent' in request.GET:
+            continents = request.GET['continent'].split(',')
+            adventures = adventures.filter(continent__name__in=continents)
+            continents = Continent.objects.filter(name__in=continents)
 
     context = {
         'adventures': adventures,
-        'current_categories': categories,
+        'current_continents': continents,
     }
 
     return render(request, 'adventures/adventures.html', context)
