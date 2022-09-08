@@ -14,3 +14,4 @@ class ExcursionForm(forms.ModelForm):
     class Meta:
         model = Excursion
         fields = '__all__'
+        
