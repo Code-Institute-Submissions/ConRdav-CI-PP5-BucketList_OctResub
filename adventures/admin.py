@@ -27,9 +27,9 @@ class CountryAdmin(admin.ModelAdmin):
 class ExcursionAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'price',
         'image',
     )
+
 
 admin.site.register(Adventure, AdventureAdmin)
 admin.site.register(Continent, ContinentAdmin)
