@@ -5,7 +5,7 @@
 <div class="container header-container">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Add an Adventure</h2>
+            <h2 class="logo-font">Edit Testimonials</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -17,12 +17,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_adventure' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_testimonials' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'adventures' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Adventure</button>
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'testimonials' %}">Cancel</a>
+                        <button class="btn btn-black rounded-0" type="submit">Update Testimonials</button>
                     </div>
                 </form>
             </div>            
