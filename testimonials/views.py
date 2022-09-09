@@ -8,10 +8,10 @@ from .forms import TestimonialForm
 def view_testimonials(request):
     """ A view to return the shopping bag """
 
-    testimonials = Testimonial.objects.all()
+    testimonial = Testimonial.objects.all()
 
     context = {
-        'testimonials': testimonials,
+        'testimonial': testimonial,
     }
 
     return render(request, 'testimonials/testimonials.html', context)
