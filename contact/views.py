@@ -1,8 +1,20 @@
-from django.conf import settings
-from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
+
+from .models import Contact
 from .forms import ContactForm
+
+
+def view_contacts(request):
+    """ A view to return the enquiries """
+
+    contacts = Contact.objects.all()
+
+    context = {
+        'contacts': contacts,
+    }
+
+    return render(request, 'contact/view_contacts.html', context)
 
 
 def contact(request):
