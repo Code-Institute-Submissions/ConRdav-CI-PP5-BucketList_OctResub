@@ -145,18 +145,3 @@ def add_excursion(request):
     }
 
     return render(request, template, context)
-
-
-@login_required
-def delete_excursion(request, country):
-    """ Delete an adventure in the store """
-    # if not user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('index'))
-
-    excursions = Excursion.objects.all()
-    excursions = excursions.filter(country__name__contains=country)
-    adventure_id = request.session.get('adventure_id', None)
-    Excursion.delete()
-    messages.success(request, 'Excursion deleted!')
-    return redirect(reverse('adventures'))
