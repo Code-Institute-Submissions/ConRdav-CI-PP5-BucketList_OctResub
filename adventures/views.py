@@ -52,7 +52,7 @@ def excursion_detail(request, country):
         'excursions': excursions,
         'adventure_id': adventure_id
     }
-
+  
     return render(request, 'adventures/excursion_detail.html', context)
 
 
