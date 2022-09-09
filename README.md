@@ -103,7 +103,44 @@ Throughout the website SEO tools are implented to increase the traffic to the we
 A facebook page was created to increase the websites exposure online and imporve traffic to the website. This would allow users to follow the website on social media and gives an unpaid solution to improve marketing.
 In addition the website includes a newsletter sign up for for users to keep updated with deals, and new adventure locations.
 ### Business Model
-This websites business model is Business to Consumer (B2C) as we are selling a product directly to customers and thereby bypassing any third-party retailers and wholesalers.
+With the BucketList project, the goal was to create a Minimum Viable Product (MVP) for a Tourism e-commerce site, operating on a Business to Consumer (B2C) business model, whereby we are selling a product directly to customers and thereby bypassing any third-party retailers and wholesalers.
+
+#### Target Audience 
+
+At its core, BucketList serves as a platform for anyone and everyone seeking an exotic escape, challenging adventure, or cultural tour, to find a trip that appeals to their desires and fulfils their dreams. The adventures on offer are those which would appear on any explorer’s bucket list, hence the name. 
+
+Being a tourism e-commerce business, the target audience for BucketList is broad. However, as the idea is to specialise in once-in-a-lifetime, curated adventures to far-flung destinations, this creates a niche for those that can afford to embark on such excursions (in terms of time and money). The target audience, therefore, most likely falls into the following categories: 
+
+People embarking on Gap Year adventures
+People seeking adventures on their sabbatical
+People who have retired and want to make the most of their new found freedom
+
+The target audience is not limited to these groups, but these are the demographics who are most likely to have the time and money to be able to seek the adventures BucketList will have on offer.
+
+#### Business Demand 
+
+Tourism is a global industry with year-round demand. 
+
+With the recent global lockdowns, and the severe impact this has had on the tourism industry, now that borders are open and travel is permitted, there is a massive demand for going on once-in-a-lifetime adventures. The goal with BucketList is to create an easy-to-use, hassle-free platform for customers to find curated adventures and book them, removing the stress that is typically involved in planning holidays. With this in mind, there is a particular emphasis on considered User Experience (UX), enabling clear navigation, profile management, content layout, and stress-free payment solutions.
+
+#### Future Features
+
+Looking forwards, with the BucketList application, there are plenty of avenues to expand on the offerings of the MVP. In future iterations and versions, I envision implementing the following additional features:
+
+- Wish List / Bucket List - whereby a customer can maintain a list of their favourite destinations and adventures.
+- Custom Adventures - whereby a customer can customise their adventure within the parameters of pre-defined options.
+
+#### Partnerships
+
+BucketList, as a business, will involve partnerships with tourism professionals in the destination countries, including local guides and operators.
+
+Furthermore, there is demand to expand into the arena of Eco-Tourism, involving partnerships with charity missions abroad - further catering to the target demographics, and offering another facet of fulfilment.
+
+#### Monetisation
+
+The core principle of the BucketList e-commerce site is to offer a B2C business model, through the vessel of selling tourism adventures to customers. This involves making profits on the goods and services offered.
+
+However, given the fact that BucketList is an e-commerce site, there is also the option to venture into monetising advertisement on the website, whereby driving traffic through to the sites of its advertising partners will generate additional income for the business.
 
 ## Design 
 ### Wireframes

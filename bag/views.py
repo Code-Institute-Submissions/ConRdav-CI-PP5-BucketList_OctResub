@@ -60,6 +60,3 @@ def remove_from_bag(request, item_id):
 
     request.session['bag'] = bag
     return HttpResponse(status=200)
-
-    messages.error(request, f'Error removing adventure: {e}')
-    return HttpResponse(Status=500)
