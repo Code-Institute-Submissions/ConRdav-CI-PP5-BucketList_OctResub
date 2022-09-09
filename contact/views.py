@@ -13,7 +13,8 @@ def contact(request):
             form.save()
             email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
             email_message = form.cleaned_data['message']
-            send_mail(email_subject, email_message, settings.EMAIL_HOST_USER, settings.EMAIL_HOST_USER)
+            send_mail(email_subject, email_message, [settings.EMAIL_HOST_USER],
+                      [settings.EMAIL_HOST_USER])
             messages.success(request, 'Thank you for your enquiry!')
             return redirect('contact')
         else:
