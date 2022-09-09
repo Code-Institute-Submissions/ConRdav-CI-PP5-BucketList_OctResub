@@ -55,7 +55,7 @@ def edit_testimonial(request, user_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated testimonial!')
-            return redirect(reverse('testimonials')
+            return redirect(reverse('testimonials'))
         else:
             messages.error(request, 'Failed to update testimonial. please ensure the form is valid.')
     else:

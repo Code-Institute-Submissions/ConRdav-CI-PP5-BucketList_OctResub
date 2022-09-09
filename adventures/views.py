@@ -84,7 +84,7 @@ def add_adventure(request):
 
 @login_required
 def edit_adventure(request, adventure_id):
-    # """ Edit an adventure in the store """
+    """ Edit an adventure in the store """
     # if not user.is_superuser:
     #     messages.error(request, 'Sorry, only store owners can do that.')
     #     return redirect(reverse('index'))
