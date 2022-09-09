@@ -49,7 +49,7 @@ def add_testimonial(request):
 def edit_testimonial(request, user_id):
     """ Edit a testimonial in the store """
 
-    testimonial = get_object_or_404(Testimonial(), pk=user_id)
+    testimonial = get_object_or_404(Testimonial, pk=user_id)
     if request.method == 'POST':
         form = TestimonialForm(request.POST, request.FILES, instance=testimonial)
         if form.is_valid():
@@ -66,6 +66,7 @@ def edit_testimonial(request, user_id):
     context = {
         'form': form,
         'testimonial': testimonial
+    }
 
     return render(request, template, context)
 
