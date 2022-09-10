@@ -103,7 +103,7 @@ Throughout the website SEO tools are implented to increase the traffic to the we
 A facebook page was created to increase the websites exposure online and imporve traffic to the website. This would allow users to follow the website on social media and gives an unpaid solution to improve marketing.
 In addition the website includes a newsletter sign up for for users to keep updated with deals, and new adventure locations.
 Chimp mail was used for this popup.
-A mockup facebook page can be seen here ![Facebook Page](assets/images/facebook_page_user.png)
+A mockup facebook page can be seen here ![Facebook Page](assets/images/facebook_page.png)
 ### Business Model
 With the BucketList project, the goal was to create a Minimum Viable Product (MVP) for a Tourism e-commerce site, operating on a Business to Consumer (B2C) business model, whereby we are selling a product directly to customers and thereby bypassing any third-party retailers and wholesalers.
 
