@@ -1,52 +1,6 @@
 # BUCKETLIST
 Live deployment for the app here https://ci-pp5-bucketlist.herokuapp.com/
 
-# Table of contents
-- [Project Overview](#project-overview)
-- [Planning](#planning)
-    * [Scope](#scope)
-        + [Primary Goals](#primary-goal)
-    * [Strategy](#strategy)
-        + [User Stories](#user-stories)
-	* [Marketing](#smarketing)
-        + [Business Model](#business-model)
-		+ [SEO Implementation](#seo-implementation)
-		+ [Marketing Techniques](#marketing-techniques)
-    * [Design](#design)
-        + [Wireframes](#wireframes)
-        + [Colours](#colours)
-        + [Fonts](#fonts)
-	 * [Structure](#structure)
-        + [Website pages](#website-pages)
-        + [Code Structure](#code-structure)
-        + [Database](#database)
-            - [Database diagram](#database-diagram)
-            - [Models](#models)
-- [Features](#features)
-    * [Feature 1 - Navigation Bar and Homepage](#feature-1)
-    * [Feature 2 - Welcome text](#feature-2)
-    * [Feature 3 - Upcoming Trips](#feature-3)
-    * [Feature 4 - Footer](#feature-4)
-    * [Feature 5 - Trip Details](#feature-5)
-    * [Feature 6 - Trip Registration](#feature-6)
-    * [Feature 7 - Past Trips](#feature-7)
-    * [Feature 8 - Trip Review](#feature-8)
-    * [Feature 9 - Delete Review](#feature-9)
-    * [Feature 10 - Edit Review](#feature-10)
-    * [Feature 11 - Register](#feature-11)
-    * [Feature 12 - Login](#feature-12)
-    * [Feature 13 - Logout](#feature-13)
-    * [Feature 14 - Admin page](#feature-14)
-- [Technologies Used](#technologies-used)
-    * [Languages](#languages)
-    * [Libraries and other resources](#libraries-and-other-resources)
-- [Testing](#testing)
-- [Deployment](#deployment)
-  * [AWS S3](#aws-s3)
-  * [Heroku and Postgres Database](#heroku-and-postgres-database)
-- [Credits](#credits)
-
-
 # Project Overview
 
 The main objective of the BucketList E-Commerce website is to provide a user-friendly platform for people to search for an adventure that suits them and to be able to purchase the advenutre securely. The target end user is anyone and everyone who is interested in an adventure, and who has a desire to travel and explore new places.
@@ -153,6 +107,24 @@ Balsamiq was used to produce the wireframes of the website after the user storie
 
 ## Structure 
 ### Wesbite Pages
+#### Index page non user/admin
+This is the index page the first page users get to when the website is loaded up.
+![index page](assets/images/index_page.png)
+#### Index page signed in as admin
+When signed in as the admin you can see an admin dropdown menu to deal with product management.
+![admin index page](assets/images/admin_index.png)
+#### Adventures
+This shows all the adventures unfiltered.
+![adventures page](assets/images/adventures.png)
+This is the advenutres page with a filter on it.
+![adventures filtered page](assets/images/adventures_filtered.png)
+#### Authorisaton
+This shows the authorisation pages needed for users to register and sign in.
+![sign up](assets/images/sign_up.png)
+![sign in](assets/images/sign_in.png)
+After that they can access their profile page where they can prefill billing information.
+![adventures page](assets/images/sign_in.png)
+
 ### Database
 ### Code Structure
 ## Database diagrams 
@@ -166,21 +138,7 @@ To get the most coverage for this project a 5 stage manual testing approach was 
 #### 4. UI Testing 
 #### 5. Acceptance Testing
 
-* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. 
 
-* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. 
-
-* For the Author Profile model the user, the bio and location is returned.
-
-* The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post, user_profile and user_profile edit are all working.
-
-* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/sign_up.png) ![Unregistered User](assets/images/sign_in.png)
-
-* Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
-![Logged in user](assets/images/index_page_user.png) ![Logged in user](assets/images/user_posts.png) ![Logged in user](assets/images/create_post.png) ![Logged in user](assets/images/edit_post.png) ![Logged in user](assets/images/logout.png) 
-
-* Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too. This gives the admin the ability to moderate the posts on the blog.
-![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
 
 
 ## Testing
