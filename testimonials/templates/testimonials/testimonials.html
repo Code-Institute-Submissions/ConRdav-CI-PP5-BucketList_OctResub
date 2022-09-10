@@ -18,22 +18,32 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+
         <div class="row">
+            <a href="{% url 'add_testimonial' %}" class="btn btn-outline-black rounded-0 mt-5">
+                <span class="text-uppercase">View Excursions</span>
+                <span class="icon">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </a>
             <div class="adventure-container text-center algin-center col-10">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
+
+
+
                     {% for testimonial in testimonials %}
                         <div class="card-columns">
                             <div class="card h-100 border-0">
                                 <div class="card-body pb-0">
-                                    <p class="mb-0 text-uppercase">{{ testimonial.country }}</p>
-                                    <p class="mb-0">{{ testimonial.user}}</p>
+                                    <p class="mb-0 text-uppercase">Country: {{ testimonial.country }}</p>
+                                    <p class="mb-0">User: {{ testimonial.user}}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">{{ testimonial.comment }}</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">{{ testimonial.value }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">Comment: {{ testimonial.comment }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">{{ testimonial.value }} /5</p>
                                         </div>
                                     </div>
                                 </div>
@@ -49,19 +59,19 @@
                         {% endif%}
                         
                         {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                        <div class="col-6 d-none d-sm-block d-md-block d-lg-none mb-5">
                             <hr>
                         </div>
                         {% endif %}
 
                         {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block  d-xl-none mb-5">
+                        <div class="col-4 d-none d-lg-block  d-xl-none mb-5">
                             <hr>
                         </div>
                         {% endif %}
 
                         {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 d-none d-xlg-block mb-5">
+                        <div class="col-3 d-none d-xlg-block mb-5">
                             <hr>
                         </div>
                         {% endif %}
