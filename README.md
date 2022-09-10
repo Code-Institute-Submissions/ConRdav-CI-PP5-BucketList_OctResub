@@ -118,12 +118,33 @@ This shows all the adventures unfiltered.
 ![adventures page](assets/images/adventures.png)
 This is the advenutres page with a filter on it.
 ![adventures filtered page](assets/images/adventures_filtered.png)
+This is the adventures detail page with a link to view the specific excursion for the adventure.
+![detail](assets/images/adventure_detail.png)
+![excursion](assets/images/excursions.png)
 #### Authorisaton
-This shows the authorisation pages needed for users to register and sign in.
+This shows the authorisation pages needed for users to register and sign in and sign out.
 ![sign up](assets/images/sign_up.png)
 ![sign in](assets/images/sign_in.png)
-After that they can access their profile page where they can prefill billing information.
-![adventures page](assets/images/sign_in.png)
+![log out](assets/images/sign_in.png)
+After that they can access their profile page where they can prefill billing information and order history.
+![profile](assets/images/profile.png)
+#### Admin 
+The admin can add adventures and excursion.
+![add adventures](assets/images/add_adventure.png)
+![add excursion](assets/images/add_excursion.png)
+The admin can view contact enquiries in the front end through their admin dropdown on the navigation bar.
+![enquiries](assets/images/user_enquiries.png)
+#### Users
+Users can submit contact forms and add testimonials that they can view on the testimonials page.]
+![contact](assets/images/contact.png)
+![contact success](assets/images/contact_success.png)
+![add testimonial](assets/images/add_testimonial.png)
+![testimonials](assets/images/testimonials.png)
+
+
+
+
+
 
 ### Database
 ### Code Structure
