@@ -14,35 +14,35 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
-        <!-- {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ adventure_count }})</p>
-            <div class="bag-notification-wrapper">
-                {% for item in bag_items %}
-                    <div class="row">
-                        <div class="col-3 my-1">
-                            {% if item.adventure.image %}
-                            <img class="w-100" src="{{ item.adventure.image.url }}" alt="{{ item.adventure.name }}">
-                            {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.adventure.name }}">
-                            {% endif %}
-                        </div>
-                        <div class="col-9">
-                            <p class="my-0"><strong>{{ item.adventure.name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        </div>
-                    </div>
-            </div>
+        {% if grand_total and not on_profile_page %}
+        <p class="logo-font bg-white text-black py-1">Your Bag ({{ adventure_count }})</p>
+        <div class="bag-notification-wrapper">
+            {% for item in bag_items %}
             <div class="row">
-                <div class="col">
-                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </a>
+                <div class="col-3 my-1">
+                    {% if item.adventure.image %}
+                    <img class="w-100" src="{{ item.adventure.image.url }}" alt="{{ item.adventure.name }}">
+                    {% else %}
+                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.adventure.name }}">
+                    {% endif %}
                 </div>
-                {% endfor %} -->
+                <div class="col-9">
+                    <p class="my-0"><strong>{{ item.adventure.name }}</strong></p>
+                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                </div>
             </div>
+        </div>
+            {% endfor %}
+        <div class="row">
+            <div class="col">s
+                <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
+                    <span class="text-uppercase">Go To Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
         {% endif %}
     </div>
 </div>
