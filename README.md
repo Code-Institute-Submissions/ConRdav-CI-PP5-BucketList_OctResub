@@ -104,7 +104,10 @@ However, given the fact that BucketList is an e-commerce site, there is also the
 ## Design 
 ### Wireframes
 Wireframes for the site were hand drawn.
-![index page](assets/images/index_page.png)
+![wireframe](assets/images/wireframe.png)
+![wireframe](assets/images/wireframe2.png)
+![wireframe](assets/images/wireframe3.png)
+![wireframe](assets/images/wireframe4.png)
 
 ## Structure 
 ### Wesbite Pages
@@ -158,6 +161,8 @@ Users can add adventures to bag and then checkout.
 ### Database diagrams 
 Lucid chart was used to layout the database models used.
 ![db models](assets/images/data_model.png)
+![db models](assets/images/model2.png)
+
 
 ## Testing
 ### Manual Testing

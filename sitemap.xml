@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/bag/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=Africa</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=Asia</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=Europe</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=North_America</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=Oceania</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=South_America</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/?continent=Africa,Asia,Europe,North_America,Oceania,South_America</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/about/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/contact/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/testimonials/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/4/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/5/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/6/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/1/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/2/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/3/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/10/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/7/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/9/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/11/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/12/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/13/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/16/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/17/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/19/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/14/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/15/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/18/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/testimonials/add_testimonial/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Tanzania/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Morocco/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Zimbabwe/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Thailand/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Japan/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Nepal/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Switzerland/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Iceland/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Greece/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Canada/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Costa%20Rica/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Jamaica/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Australia/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/New%20Zealand/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Fiji/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Peru/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Brazil/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-bucketlist.herokuapp.com/adventures/excursions/Argentina/</loc>
+  <lastmod>2022-09-10T10:37:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
