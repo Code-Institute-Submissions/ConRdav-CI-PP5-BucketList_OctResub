@@ -9,6 +9,7 @@ body {
     height: calc(100vh - 164px);
     color: #AC3B61;
     font-family: 'Raleway', sans-serif;
+    padding-bottom: 70px;
 }
 
 .icon {
