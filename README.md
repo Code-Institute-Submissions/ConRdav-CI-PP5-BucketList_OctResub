@@ -42,7 +42,7 @@ Live deployment for the app here
     * [Libraries and other resources](#libraries-and-other-resources)
 - [Testing](#testing)
 - [Deployment](#deployment)
-  * [Local Deployment](#local-deployment)
+  * [AWS S3](#aws-s3)
   * [Heroku and Postgres Database](#heroku-and-postgres-database)
 - [Credits](#credits)
 
@@ -155,6 +155,16 @@ Balsamiq was used to produce the wireframes of the website after the user storie
 ### Code Structure
 ## Database diagrams 
 
+## Testing
+### Manual Testing
+To get the most coverage for this project a 5 stage manual testing approach was used. Automated testing wasn't being used at all.
+#### 1. Unit Testing
+#### 2. Integration Testing
+#### 3. System Testing
+#### 4. UI Testing 
+#### 5. Acceptance Testing
+
+
 
 ## Models
 ### User
@@ -173,6 +183,10 @@ Balsamiq was used to produce the wireframes of the website after the user storie
 #### Contact 
 - Used by users for any queries related to the website.
 - Admins have the function to approve the request
+
+## Credits
+- All the prepopulated information for excursions and adventures were copied and modified from travel sites. This were Wanderlust, Lonely Planet, Vacation Ideas, The Culture Trip, Travellers WorldWide, The Crazy Tourist and Trip Advisor.
+- All the images used in the advenutre and excursion models were downloaded from google images and I take no credit over them whatsoever.
 
 
 
