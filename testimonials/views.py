@@ -6,15 +6,9 @@ from .forms import TestimonialForm
 
 
 def view_testimonials(request):
-    """ A view to return the shopping bag """
+    """ A view to return the shopping bag """  
 
-    testimonial = Testimonial.objects.all()
-
-    context = {
-        'testimonial': testimonial,
-    }
-
-    return render(request, 'testimonials/testimonials.html', context)
+    return render(request, 'testimonials/testimonials.html')
 
 
 def add_testimonial(request):

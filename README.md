@@ -1,5 +1,5 @@
 # BUCKETLIST
-Live deployment for the app here 
+Live deployment for the app here https://ci-pp5-bucketlist.herokuapp.com/
 
 # Table of contents
 - [Project Overview](#project-overview)
@@ -102,6 +102,8 @@ Throughout the website SEO tools are implented to increase the traffic to the we
 ### Marketing Techniques
 A facebook page was created to increase the websites exposure online and imporve traffic to the website. This would allow users to follow the website on social media and gives an unpaid solution to improve marketing.
 In addition the website includes a newsletter sign up for for users to keep updated with deals, and new adventure locations.
+Chimp mail was used for this popup.
+A mockup facebook page can be seen here ![Facebook Page](assets/images/facebook_page_user.png)
 ### Business Model
 With the BucketList project, the goal was to create a Minimum Viable Product (MVP) for a Tourism e-commerce site, operating on a Business to Consumer (B2C) business model, whereby we are selling a product directly to customers and thereby bypassing any third-party retailers and wholesalers.
 
@@ -183,6 +185,60 @@ To get the most coverage for this project a 5 stage manual testing approach was 
 #### Contact 
 - Used by users for any queries related to the website.
 - Admins have the function to approve the request
+
+
+## Deployment
+
+Deployment procedure (using Heroku):
+
+1. First, after logging in to the Heroku dashboard, navigate to ‘Create New App’.
+2. Give your project a unique name and choose an appropriate region, before creating your app.
+3. Navigate to the Resources tab. Using the Add Ons section, add ‘Heroku Postgres’ as the app’s database.
+4. Create an env.py file in your root directory and import the os library within this file.
+5. Within your env.py file, create environment variables for your DATABASE_URL and SECRET_KEY. They should appear as follows:
+
+	__*os.environ[“DATABASE_URL”] = “___”__
+
+	__*os.environ[“SECRET_KEY”] = “___”__
+
+6. Assign a value to your DATABASE_URL and SECRET_KEY and within the Heroku settings tab, create corresponding Config Variables.
+7. In your settings.py file, assign your Heroku app as a localhost in your ALLOWED_HOSTS variable, using the appropriate format:
+
+	__app_name.herokuapp.com__
+
+8. After updating all of the necessary environment and configuration variables in the settings.py and env.py files, create a new file at the top level directory called ‘Procfile’. 
+9. Within Procfile, add the following code:
+
+
+	__web: guincorn PROJECT_NAME.wsgi__
+
+10. Using the Command Line interface: add, commit and push your files. 
+11. Finally, navigate to the Deployment tab in Heroku and deploy your branch manually, observing the build logs for errors.
+12. Heroku will build the app for you. If the build is successful, Heroku will provide a link to your live app.
+
+13. To store static and media files Amazon Web Services simple cloud storage was used. After an account is created and your search for s3 cloud storage the set up is simple and involves you adding your heroku deployed url.
+### Django AdminUser
+For this project the built in Django admin page is where the admin approves posts and comments so that they can be viewed on the post list.
+
+
+
+## Used Technologies
+* HTML
+* CSS
+* Python
+* JavaScript
+* ChimpMail
+* AWS S3
+
+## Frameworks and Libraries used
+* Django with;
+    * gunicorn
+    * psycopg2
+    * postgresql
+    * AllAuth
+    * Crispy Forms
+    * colorfield
+* Bootstrap
 
 ## Credits
 - All the prepopulated information for excursions and adventures were copied and modified from travel sites. This were Wanderlust, Lonely Planet, Vacation Ideas, The Culture Trip, Travellers WorldWide, The Crazy Tourist and Trip Advisor.
