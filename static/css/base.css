@@ -158,6 +158,16 @@ body {
     overflow-y: auto;
 }
 
+
+/* Media Queries */
+
+/* Slightly larger container on x1 screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -210,14 +220,6 @@ body {
 
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
-}
-/* Media Queries */
-
-/* Slightly larger container on x1 screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
 }
 
 /* fixed top navbar only on medium and up */
