@@ -13,6 +13,7 @@ def all_adventures(request):
 
     adventures = Adventure.objects.all()
     continents = None
+    paginate_by = 9
 
     if request.GET:
         if 'continent' in request.GET:
