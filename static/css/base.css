@@ -72,7 +72,15 @@ body {
 }
 
 .text-black {
-    color: black;
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 .overlay {
@@ -83,6 +91,11 @@ body {
     position: fixed;
     background:#EEE2DC;
     z-index: -1;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 .update-link,
