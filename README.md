@@ -166,6 +166,23 @@ To get the most coverage for this project a 5 stage manual testing approach was 
 #### 4. UI Testing 
 #### 5. Acceptance Testing
 
+* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. 
+
+* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. 
+
+* For the Author Profile model the user, the bio and location is returned.
+
+* The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post, user_profile and user_profile edit are all working.
+
+* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/sign_up.png) ![Unregistered User](assets/images/sign_in.png)
+
+* Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
+![Logged in user](assets/images/index_page_user.png) ![Logged in user](assets/images/user_posts.png) ![Logged in user](assets/images/create_post.png) ![Logged in user](assets/images/edit_post.png) ![Logged in user](assets/images/logout.png) 
+
+* Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too. This gives the admin the ability to moderate the posts on the blog.
+![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
+
+
 ## Testing
 
 ### Automated Testing
@@ -190,8 +207,6 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 ![Coverage report](assets/images/coverage_report.png)
 * Using Django Coverage I realised that I hadn't covered enough testing with Django TestCase so manual testing was the next step to cover more testing.
 
-### Manual Testing
-* I used a KanBan board to help plan my manual testing and the points I needed to hit. [Here](https://github.com/ConRdav/pp4-three-lions/projects/3)
 
 * Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. 
 
