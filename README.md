@@ -46,17 +46,20 @@ The primary goals of the website users are:
 The user stories were broken down into epics first which include technical, landing page, adventures, marketing, basket, checkout, testimonials and user profiles.
 These were then broken down into 5 sprints where in each sprint covered 5 days and different user stories.
 Each user story is broken down into their descrition and the acceptance criteria that needed to met for it to have been achieved.
-The user stories for this project can be viewed [here]()
+![JIRA](assets/images/jira_1.png)
+![JIRA](assets/images/jira_2.png)
+![JIRA](assets/images/jira_3.png)
+Login details will be provided to assessor due to inability to share.
 
 ## Marketing
 ### Search Engine Optimization (SEO)
 SEO is used as a tool for improving the quality and quantity of website traffic to the website targeting unpaid traffic rather than direct traffic or paid traffic.
 WordTracker.com and Google Keyword Tracker were the tools used to help implenting this. The keywords were inputted into these tools to gather the results for which keywords returned the highest traffic and lowest competition ideally.
-Throughout the website SEO tools are implented to increase the traffic to the website.
+Throughout the website SEO tools are implented to increase the traffic to the website. These key words were the inputted into the meta data.
 ### Marketing Techniques
 A facebook page was created to increase the websites exposure online and imporve traffic to the website. This would allow users to follow the website on social media and gives an unpaid solution to improve marketing.
 In addition the website includes a newsletter sign up for for users to keep updated with deals, and new adventure locations.
-Chimp mail was used for this popup.
+Chimp mail was used for this popup and the script included in the header code.![MailChimp](assets/images/mailchimp.png)
 A mockup facebook page can be seen here ![Facebook Page](assets/images/facebook_page.png)
 ### Business Model
 With the BucketList project, the goal was to create a Minimum Viable Product (MVP) for a Tourism e-commerce site, operating on a Business to Consumer (B2C) business model, whereby we are selling a product directly to customers and thereby bypassing any third-party retailers and wholesalers.
@@ -100,10 +103,8 @@ However, given the fact that BucketList is an e-commerce site, there is also the
 
 ## Design 
 ### Wireframes
-Balsamiq was used to produce the wireframes of the website after the user stories and marketing techniques had been researched.
-### Fonts
-### Colours
-
+Wireframes for the site were hand drawn.
+![index page](assets/images/index_page.png)
 
 ## Structure 
 ### Wesbite Pages
@@ -142,45 +143,192 @@ Users can submit contact forms and add testimonials that they can view on the te
 ![contact success](assets/images/contact_success.png)
 ![add testimonial](assets/images/add_testimonial.png)
 ![testimonials](assets/images/testimonials.png)
+Users can add adventures to bag and then checkout.
+![add to bag](assets/images/add_to_bag.png)
+![bag](assets/images/bag.png)
+![checkout](assets/images/checkout.png)
 
 
 
 
 
 
-### Database
-### Code Structure
-## Database diagrams 
+
+
+### Database diagrams 
+Lucid chart was used to layout the database models used.
+![db models](assets/images/data_model.png)
 
 ## Testing
 ### Manual Testing
-To get the most coverage for this project a 5 stage manual testing approach was used. Automated testing wasn't being used at all.
-#### 1. Unit Testing
-#### 2. Integration Testing
-#### 3. System Testing
-#### 4. UI Testing 
-#### 5. Acceptance Testing
+For the manual testing, I referenced the User Story Acceptance Criteria that I defined in JIRA to frame the test cases. Testing from a user perspective, in line with the Acceptance Criteria, ensures the quality and functionality of the code, and assures the quality of the user experience.
 
+### BUC-11
+- AC1. The Landing Page should have a clear layout with a navigation menu so that the user understands how to navigate to their desired location within the application.
+- AC2. The Landing Page should be aesthetically pleasing, with a harmonious colour scheme and clear images, in order to create a good impression to users and enhance user experience.
 
-### Pep8 and Pylint Python Validators
-* admin.py
-![admin.py](assets/images/admin_py.png) 
-* apps.py
-![apps.py](assets/images/app_py.png) 
-* forms.py 
-![forms.py](assets/images/forms.png) 
-* models.py 
-![models.py](assets/images/models_py.png) 
-* urls.py
-![urls.py](assets/images/blog_url.png) 
-* views.py 
-![views.py](assets/images/views.png) 
-* test_forms.py
-![test_forms.py](assets/images/test_forms_pep8.png)
-* test_urls.py 
-![test_urls.py](assets/images/test_urls_pep8.png)
-* test_views.py 
-![test_views.py](assets/images/test_views_pep8.png)
+When a user navigates to the landing page, they are presented with a clearly presented page, which is aesthetically pleasing and not jarring.
+There is a clear navigation menu which sensical navigation options, that are explicitly named and give me a clear understanding of the website’s layout and how to navigate between pages.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-12
+- AC1. There should be a clearly presented main menu with navigation options which route to the different destinations within the application when clicked.
+
+The main navigation menu on the landing page is clearly presented, with explicit navigation options.
+All of the navigation links, when clicked, navigate the user to the intended page, as per the button label.
+Within the pages of the application, there are explicit and functioning navigation buttons to re-direct me to different parts of the website, so that I can easily navigate to different sections of the site to view the content I want and perform the actions I wish to.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-14
+- AC1. When the user navigates to the Adventure Dashboard, all of the product should be displayed clearly on the screen.
+- AC2. The user should be able to view a title, description, price and image if there is one.
+- AC3. There should be a navigation menu so that the user can navigate to different sections of the application from the Adventure Dashboard.
+
+When a user navigates to Adventure Dashboard, the page is rendered clearly and they are presented with a clearly presented list of adventure options.
+The products each have a brief label, description, price and image. The products are presented in such a way that is aesthetically pleasing and easy to read.
+There is a navigation menu at the head of the adventure dashboard, allowing me to navigate to different sections of the app if I wish to.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-16
+- AC1. When a user clicks on an adventure on the dashboard page, they should be navigated to a separate page with a more detailed view of the product.
+- AC2. There should be a buttons that allows the user to navigate back to the adventure dashboard.
+- AC3. There should be placeholder buttons for viewing any excursions associated with the adventure, and for modifying the quantity of the product and adding it to the basket.
+
+When a user clicks on a product item on the adventure dashboard page, they are navigated to a separate, dedicated page with a more detailed view of the product.
+There is a button called ‘Keep Shopping’ which navigates back to the adventure dashboard, and renders the page and loads the adventures.
+There is a button for viewing excursions and trips included with the adventure, which when clicked navigates successfully to a separate, dedicated excursion page, and renders the products clearly as expected.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-17
+- AC1. There should be a button that when clicked navigates to a page listing the excursions associated with an adventure destination.
+- AC2. There should be a clear layout, displaying the excursions on the page, including a brief description and an image.
+
+There is a button for viewing excursions and trips included with the adventure, which when clicked navigates successfully to a separate, dedicated excursion page, and renders the products clearly as expected.
+The excursions are clearly presented on the page in the form of a list, each with a label, description and image.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-25
+- AC1. Implement Admin user functionality for all CRUD functionality.
+- AC2. Admin should be able to create adventure products.
+- AC3. Admin should be able to edit adventure products.
+- AC4. Admin should be able to view adventure products.
+- AC5. Admin should be able to delete adventure products.
+
+As an admin user, when I navigate to the adventure dashboard, the products are rendered and displayed clearly on the page.
+Under each product, there is an edit and remove button.
+When I click on the edit button, I am redirected to a form where I am able to edit the price of the adventure. 
+When I click the delete adventure button, the adventure is removed.
+After I have made my change, the modification or removal is reflecting in the adventure dashboard page.
+As an admin user, under the ‘My Account’ icon at the top right of the screen, there is an option to ‘Add Adventures’. Here I am able to edit a form and upon saving, a new adventure product is created and it reflects in the adventure dashboard as expected.
+
+#### BUC-18
+- AC1. There should be a Shopping Basket icon on the top right of the website, visible on all pages, which displays the total price of the items and navigates to the Shopping Basket page when clicked.
+- AC2. The Shopping Basket should display the items the user has added to their basket, detailed the name and price of the items.
+- AC3. There should be a total price of the items in the basket.
+
+There is a shopping basket icon top right of the screen, which displays a total price of items in my basket.
+When a user clicks on the basket icon, they are navigated to a separate, dedicated shopping basket page.
+The basket page is clearly rendered and displays any items in my basket as expected, with their label and price.
+There is a total price displayed, which is accurate depending on any updates made to the basket.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-19
+- AC1. There should be a button that allows the user to add Adventure products to their basket from the Adventure Details page.
+- AC2. The user should be able to update the quantity of items they wish to add to the basket.
+- AC3. After adding the product to the basket, the total price of the basket should be updated, and the user should be able to view the product in the basket.
+
+When a user navigates to the Adventure Details page via clicking on an adventure in the adventure dashboard, a separate, dedicated and detailed view of the product is rendered.
+On this page, there is a quantity bar, that allows the user to adjust the quantity of products.
+On this adventure details page, there is a button that when clicked, adds the adventure product to the basket.
+The basket is updated with the quantity of products specified, and the total price is reflective of the sum of the items.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-21
+- AC1. Users should be able to modify the quantity of individual products in their basket.
+- AC2. Users should be able to remove items from their basket.
+- AC3. When users modify their basket, the total price should be updated.
+
+When the user navigates to their shopping basket via the icon, they are redirected to the basket page and the items they have added reflect as expected.
+The user is able to remove items from their basket by clicking the remove button next to the item.
+The user is able to adjust the quantity of individual items and click the update button to adjust the quantity.
+After both actions, the total price is updated correctly.
+
+#### BUC-27
+- AC1. There should be a menu link for the Testimonials page, which when clicked routes the user to a page containing customer testimonials.
+- AC2. The testimonials should be clearly formatted on that page so that they are readable for the user.
+
+There is a menu link with a label for Testimonials, which when clicked navigates to a page which renders and clearly presents a view of user testimonials that are easily readable.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-28
+- AC1. On the Testimonials page there should be a button called ‘Add Testimonial’.
+- AC2. When the user clicks the button, they should be given a form to fill out.
+- AC3. Once the form has been submitted, the user should be redirected to the Testimonials page, where their testimonial should be visible.
+
+On the Testimonials page there is button called ‘Add Testimonial’.
+When the user clicks on the add testimonial button, they are redirected to a form to fill out. Upon submission of the form, the user is re-directed to the testimonials page, where their newly added testimonial reflects as expected.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-23
+- AC1. When the user clicks on the checkout button, they should be directed to a checkout page.
+- AC2. There should be a form for entering billing details.
+- AC3. The user’s basket items should be displayed on the screen so that they can see their order.
+- AC4. There should be a form for entering payment details.
+- AC5. There should be a button for completing payment.
+
+In the shopping basket, there is a checkout button.
+When the user clicks on secure checkout, they are redirected to a separate, dedicated checkout page, which renders clearly.
+The page includes a view of the basket items the user wishes to checkout and purchase, as well as a form for completing their billing details.
+If the user has updated their billing details in their profile page, the billing details form is auto populated.
+There is a ‘Complete Order’ button for fulfilling the order and processing payment clearly visible on the screen.
+This functionality works for all user roles - logged in user, anonymous user, admin user.
+
+#### BUC-24
+- AC1. When a user clicks the button to checkout their items, they should be redirected to the checkout page.
+- AC2. The checkout page should display a billing details form and the user’s basket items.
+- AC3. When the user clicks the button to complete the order, after entering their payment details correctly, the payment should be completed via Stripe and after successful payment the screen should display a success message. 
+
+When the user clicks the button to checkout their items, they are redirected to the checkout page.
+The checkout page clearly displays a billing details form, the user’s basket items, and a ‘Complete Order’ button.
+When the user clicks the complete order button, a call to process the payment is made via Stripe payment.
+
+#### BUC-29
+- AC1. When the user clicks on the My Account icon and selects to view their profile, they should be directed to a My Profile page.
+- AC2. There should be a form which allows the user to view and maintain their billing details.
+- AC3. There should be a view of the user’s previous orders.
+
+When the user clicks to view their profile via the My Profile icon, they are redirected to a profile page which is clearly rendered.
+There is a form which allows the user to view and update their billing details.
+There is also a list of the user’s previous orders.
+
+#### BUC-37
+- AC1. There should be a ‘My Account’ icon that when clicked, gives the user the option to Login to an existing account or Register a new account.
+- AC2. If the user clicks to login to an existing account, they should be directed to login.
+- AC3. If the user clicks to register a new account they should be directed to a form to create a new account.
+- AC4. Upon signing in, there should be a third option for the user to view their profile, where they should be able to update their billing details and view their orders.
+
+There is a My Account icon to the top right of the screen. 
+When the user clicks the icon, they are given the option to login to an existing account or register a new account.
+If the user clicks to register a new account, they are redirected to a form that allows them to create a new account, providing their email address and password. 
+If the user clicks to login to an existing account, they should be directed to a form to enter their login credentials, and once submitted, they are signed in.
+Upon signing in to their account, the user is given a third option under the icon, which allows them to view and maintain their profile.
+
+#### BUC-40
+- AC1. As an admin user, when I click on the My Account icon, there should be a button for viewing enquiries.
+- AC2. When the admin clicks the button, they should be navigated to a page which displays all of the user contact details and messages clearly.
+
+When an admin user logs in and clicks on the My Account icon, they are given the option to view user enquiries.
+When the admin user clicks on the view enquiries link, they are redirected to a separate, dedicated page that clearly renders all of the user contact enquiries, with their email, subject and message.
+
+# BUC-39
+- AC1. There should be a navigation link labelled Contact Us in the main navigation bar.
+- AC2. When clicked, this link should navigate the user to a contact us page, where there should be a form for them to fill in their email address, subject, and message.
+- AC3. There should be a submit button, that allows the user to send their request successfully.
+
+There is a navigation link in the main menu bar with a label Contact Us.
+When clicked, this button navigates the user to a separate, dedicated Contact Us page.
+The page includes a form, which allows the user to enter their email address, a subject, and a message.
+Upon clicking submit, the form is submitted and a success message is shown.
 
 ### HTML Validation with Official W3C Validator
 ## base.html
@@ -222,8 +370,12 @@ To get the most coverage for this project a 5 stage manual testing approach was 
 ## django-all_auth's signup.html edited for uniformity
 * Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 
-### CSS Validation with Official W3C Validator
-![CSSVALIDATION](assets/images/css_validation.png)
+### CSS Validation with Official W3C Validator and Javascript validator
+![CSSVALIDATION](assets/images/base_css.png)
+![CSSVALIDATION](assets/images/index_css.png)
+![CSSVALIDATION](assets/images/profile_css.png)
+![JSVALIDATION](assets/images/stripe_element_js.png)Slight issues due to using jquery.
+![JSVALIDATION](assets/images/country_fields_js.png)Slight issues due to using jquery.
 
 ## LightHouse testing
 ![lighthouse1]()
@@ -235,21 +387,6 @@ To get the most coverage for this project a 5 stage manual testing approach was 
 ![lighthouse4]()
 
 ![lighthouse5]()
-
-## Responsive testing
-This app has been tested on mobile and tablet devices and is responsive.
-![mobile1]()
-
-![mobile2]()
-
-![mobile3]()
-
-![mobile4]()
-
-![mobile5]()
-
-
-
 
 ## Models
 ### User
@@ -326,6 +463,7 @@ For this project the built in Django admin page is where the admin approves post
 ## Credits
 - All the prepopulated information for excursions and adventures were copied and modified from travel sites. This were Wanderlust, Lonely Planet, Vacation Ideas, The Culture Trip, Travellers WorldWide, The Crazy Tourist and Trip Advisor.
 - All the images used in the advenutre and excursion models were downloaded from google images and I take no credit over them whatsoever.
+- The code institute walkthrough project was used for the bag and checkout and the product model.
 
 
 
