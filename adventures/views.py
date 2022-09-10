@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Adventure, Continent, Excursion, Country
+from .models import Adventure, Continent, Excursion
 from .forms import AdventureForm, ExcursionForm
 
 # Create your views here.
@@ -13,7 +13,6 @@ def all_adventures(request):
 
     adventures = Adventure.objects.all()
     continents = None
-    paginate_by = 9
 
     if request.GET:
         if 'continent' in request.GET:
@@ -53,16 +52,13 @@ def excursion_detail(request, country):
         'excursions': excursions,
         'adventure_id': adventure_id
     }
-  
+
     return render(request, 'adventures/excursion_detail.html', context)
 
 
 @login_required
 def add_adventure(request):
     """ Add an adventure to the store """
-    # if not user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('index'))
 
     if request.method == 'POST':
         form = AdventureForm(request.POST, request.FILES)
@@ -86,9 +82,6 @@ def add_adventure(request):
 @login_required
 def edit_adventure(request, adventure_id):
     """ Edit an adventure in the store """
-    # if not user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('index'))
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     if request.method == 'POST':
@@ -115,9 +108,6 @@ def edit_adventure(request, adventure_id):
 @login_required
 def delete_adventure(request, adventure_id):
     """ Delete an adventure in the store """
-    # if not user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('index'))
 
     adventure = get_object_or_404(Adventure, pk=adventure_id)
     adventure.delete()

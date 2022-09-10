@@ -9,7 +9,6 @@ def view_testimonials(request):
     """ A view to return the shopping bag """
 
     testimonial = Testimonial.objects.all()
-    paginate_by = 9
 
     context = {
         'testimonial': testimonial,
