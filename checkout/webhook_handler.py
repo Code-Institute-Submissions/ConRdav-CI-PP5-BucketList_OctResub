@@ -6,6 +6,7 @@ from adventures.models import Adventure
 import json
 import time
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 

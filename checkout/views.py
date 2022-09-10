@@ -26,13 +26,14 @@ def cache_checkout_data(request):
             'username': request.user,
         })
         return HttpResponse(status=200)
-    except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
-        return HttpResponse(content=e, status=400)
+    # except Exception as e:
+    #     messages.error(request, 'Sorry, your payment cannot be \
+    #         processed right now. Please try again later.')
+    #     return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -92,7 +93,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-         # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any info
+        #  the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)

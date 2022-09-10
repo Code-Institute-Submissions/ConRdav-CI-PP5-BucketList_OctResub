@@ -10,7 +10,6 @@ class Continent(models.Model):
 
     def __str__(self):
         return self.name
-    
 
 
 class Country(models.Model):

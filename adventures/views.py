@@ -67,7 +67,7 @@ def add_adventure(request):
             messages.success(request, 'Successfully added adventure!')
             return redirect('adventures')
         else:
-            messages.error(request, 'Failed to add adventure. Please ensure the form is valid.')
+            messages.error(request, ('Failed to add adventure. Please ensure the form is valid.')
     else:
         form = AdventureForm()
 

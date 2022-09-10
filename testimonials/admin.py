@@ -3,6 +3,7 @@ from .models import Testimonial
 
 # Register your models here.
 
+
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = (
         'country',
@@ -11,5 +12,6 @@ class TestimonialAdmin(admin.ModelAdmin):
         'comment',
         'value',
     )
+
 
 admin.site.register(Testimonial, TestimonialAdmin)
