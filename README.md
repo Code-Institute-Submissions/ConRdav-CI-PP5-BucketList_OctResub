@@ -166,6 +166,136 @@ To get the most coverage for this project a 5 stage manual testing approach was 
 #### 4. UI Testing 
 #### 5. Acceptance Testing
 
+## Testing
+
+### Automated Testing
+I used Django to run automated testing however, sqlite3 was used as a local database to achieve this testing.
+
+* I used Django TestCase to test my forms.py, urls.py and views.py within test_forms.py, test_urls.py and test_views.py.
+
+#### test_forms.py
+![testing forms.py](assets/images/test_forms.png)
+
+#### test_urls.py
+![testing urls.py](assets/images/test_urls.png)
+
+#### test_views.py
+![testing views.py](assets/images/test_views.png)
+
+![Test result](assets/images/test_result.png)
+
+* I attempted to test models.py but didn't have a great understanding of what to test for so decided to continue with manual testing for the rest of my application in order to verify quality and usability from the user's perspective.
+
+#### Django Coverage report
+![Coverage report](assets/images/coverage_report.png)
+* Using Django Coverage I realised that I hadn't covered enough testing with Django TestCase so manual testing was the next step to cover more testing.
+
+### Manual Testing
+* I used a KanBan board to help plan my manual testing and the points I needed to hit. [Here](https://github.com/ConRdav/pp4-three-lions/projects/3)
+
+* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. 
+
+* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. 
+
+* For the Author Profile model the user, the bio and location is returned.
+
+* The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post, user_profile and user_profile edit are all working.
+
+* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/sign_up.png) ![Unregistered User](assets/images/sign_in.png)
+
+* Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
+![Logged in user](assets/images/index_page_user.png) ![Logged in user](assets/images/user_posts.png) ![Logged in user](assets/images/create_post.png) ![Logged in user](assets/images/edit_post.png) ![Logged in user](assets/images/logout.png) 
+
+* Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too. This gives the admin the ability to moderate the posts on the blog.
+![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
+
+### Pep8 and Pylint Python Validators
+* admin.py
+![admin.py](assets/images/admin_py.png) 
+* apps.py
+![apps.py](assets/images/app_py.png) 
+* forms.py 
+![forms.py](assets/images/forms.png) 
+* models.py 
+![models.py](assets/images/models_py.png) 
+* urls.py
+![urls.py](assets/images/blog_url.png) 
+* views.py 
+![views.py](assets/images/views.png) 
+* test_forms.py
+![test_forms.py](assets/images/test_forms_pep8.png)
+* test_urls.py 
+![test_urls.py](assets/images/test_urls_pep8.png)
+* test_views.py 
+![test_views.py](assets/images/test_views_pep8.png)
+
+### HTML Validation with Official W3C Validator
+## base.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## index.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## about.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## add_adventure.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## add_excursion.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## adventure_detail.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## adventures.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## edit_adventures.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## excursion_detail.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## bag.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## checkout_success.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## checkout.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## contact.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## profile.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## add_testimonial.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## testimonials.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's login.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's logout.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's signup.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+
+### CSS Validation with Official W3C Validator
+![CSSVALIDATION](assets/images/css_validation.png)
+
+## LightHouse testing
+![lighthouse1]()
+
+![lighthouse2]()
+
+![lighthouse3]()
+
+![lighthouse4]()
+
+![lighthouse5]()
+
+## Responsive testing
+This app has been tested on mobile and tablet devices and is responsive.
+![mobile1]()
+
+![mobile2]()
+
+![mobile3]()
+
+![mobile4]()
+
+![mobile5]()
+
+
 
 
 ## Models
