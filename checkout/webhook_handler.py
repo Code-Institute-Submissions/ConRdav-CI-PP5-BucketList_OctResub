@@ -17,6 +17,9 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
+        print("event =")
+        print(event)
+
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
@@ -29,6 +32,13 @@ class StripeWH_Handler:
         pid = intent.id
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
+
+        print("event =")
+        print(event)
+        print("intent =")
+        print(intent)
+        print("pid = ")
+        print(pid)
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
