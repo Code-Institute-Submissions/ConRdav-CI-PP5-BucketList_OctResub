@@ -36,10 +36,6 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    print("inside checkout view def checkout")
-    print("request = ")
-    print(request)
-
     if request.method == 'POST':
         bag = request.session.get('bag', {})
 
@@ -56,9 +52,7 @@ def checkout(request):
         }
 
         order_form = OrderForm(form_data)
-        print("order form =")
-        print(order_form)
-        
+    
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -75,15 +69,7 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    # else:
-                    #     for size, quantity in item_data['items_by_size'].items():
-                    #         order_line_item = OrderLineItem(
-                    #             order=order,
-                    #             adventure=adventure,
-                    #             quantity=quantity,
-                    #             adventure_size=size,
-                    #         )
-                    #         order_line_item.save()
+
                 except Adventure.DoesNotExist:
                     messages.error(request, (
                         "One of the adventure in your bag wasn't found in our database. "
@@ -112,9 +98,6 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        print("stripe payment intent =")
-        print(intent)
 
         # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
