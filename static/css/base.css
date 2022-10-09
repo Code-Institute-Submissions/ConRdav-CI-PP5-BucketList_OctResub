@@ -273,6 +273,11 @@ body {
         font-size: 1rem;
     }
 
+    .main-nav {
+        background-color: #EDC7B7;
+        color: #AC3B61;
+    }
+
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
