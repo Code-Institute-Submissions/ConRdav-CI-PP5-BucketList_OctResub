@@ -393,6 +393,23 @@ Upon clicking submit, the form is submitted and a success message is shown.
 
 ![lighthouse5]()
 
+
+## Bugs
+### Outstanding bugs
+#### Header Responsiveness 
+- There is an existing bug, whereby when the website is loaded on a mobile, the main navigation bar is not clearly visible. 
+- The user will have to click on the top left of the screen to toggle a drop down menu list.
+- This is a css issue relating to the included templates folder structure. Given more time, this issue would be resolved in a future iteration.
+#### Removing items from Basket
+- There is an existing bug whereby the remove item button in the shopping basket does not function as expected.
+- This is an issue with the template and view, which would be resolved given more time.
+- The quantity, however, can be modified.
+- This issue would be resolved in a future iteration.
+#### Stripe payment completion
+- There is an existing bug relating to the processing of the Stripe payment. 
+- This was working but there appears to be a configuration issue.
+- This would be resolved in a future iteration.
+
 ## Models
 ### User
 - The User model contains information about each user that registers
