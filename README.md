@@ -394,21 +394,18 @@ Upon clicking submit, the form is submitted and a success message is shown.
 ![lighthouse5]()
 
 
-## Bugs
-### Outstanding bugs
-#### Header Responsiveness 
-- There is an existing bug, whereby when the website is loaded on a mobile, the main navigation bar is not clearly visible. 
-- The user will have to click on the top left of the screen to toggle a drop down menu list.
-- This is a css issue relating to the included templates folder structure. Given more time, this issue would be resolved in a future iteration.
-#### Removing items from Basket
-- There is an existing bug whereby the remove item button in the shopping basket does not function as expected.
-- This is an issue with the template and view, which would be resolved given more time.
-- The quantity, however, can be modified.
-- This issue would be resolved in a future iteration.
-#### Stripe payment completion
-- There is an existing bug relating to the processing of the Stripe payment. 
-- This was working but there appears to be a configuration issue.
-- This would be resolved in a future iteration.
+## Bugs Encountered
+### Header Responsiveness
+- During development and responsiveness testing, I encountered a bug whereby the main navigation bar was not responsive when the application was loaded and displayed on a mobile. This resulted in the navigation bar not rendering properly, thereby making the UX less than ideal, and causing potential confusion for any users when trying to navigate the website.
+- In order to fix the issue, I had to adjust the CSS class relating to the navigation bar in order to ensure it was responsive and would render correctly on different device displays.
+ 
+### Stripe Payment Completion
+- During development and integration testing, I encountered a bug whereby the Stripe payment was not processing successfully. The payment status was remaining as ‘Incomplete’ and the user was not able to checkout their items. 
+- This issue was due to a typo in the Stripe Secret Key, which is used to authenticate server requests. After correcting the key value and re-compiling and deploying my code, the issue was resolved.
+
+### Removing items from basket
+- During development and integration testing, I encountered a bug whereby no action was taken upon clicking the remove item from basket. Therefore, the remove button in the basket was not functional.
+- This issue was due to a typo in the bag.html file, resulting in a mismatch between the button link and the corresponding function. By correcting the typo, the issue was resolved, and the remove button was functional again.
 
 ## Models
 ### User
