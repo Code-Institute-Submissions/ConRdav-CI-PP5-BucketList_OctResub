@@ -5,7 +5,7 @@ Live deployment for the app here https://ci-pp5-bucketlist.herokuapp.com/
 
 The main objective of the BucketList E-Commerce website is to provide a user-friendly platform for people to search for an adventure that suits them and to be able to purchase the advenutre securely. The target end user is anyone and everyone who is interested in an adventure, and who has a desire to travel and explore new places.
 
-The e-commerce store has functionality that allows the user to add an adventure into a checkout bag, post testimonials, add adventures to a Wishlist to save for later, contact us directly for any enquiries. This access thereby permits the user to interact with the forum platform and take part in discussions. End users are able to: 
+The e-commerce store has functionality that allows the user to add an adventure into a checkout bag, post testimonials, contact us directly for any enquiries. This access thereby permits the user to interact with the forum platform and take part in discussions. End users are able to: 
 
 	- Add a adventure to the checkout bag.
 	- Update their checkout bag.
@@ -133,7 +133,7 @@ This shows the authorisation pages needed for users to register and sign in and 
 After that they can access their profile page where they can prefill billing information and order history.
 ![profile](assets/images/profile.png)
 #### Admin 
-The admin can add adventures and excursion.
+The admin can add adventures and excursions.
 ![add adventures](assets/images/add_adventure.png)
 ![add excursion](assets/images/add_excursion.png)
 The admin can view contact enquiries in the front end through their admin dropdown on the navigation bar.
@@ -141,7 +141,7 @@ The admin can view contact enquiries in the front end through their admin dropdo
 !![admin](assets/images/admin_panel.png)
 ![enquiries](assets/images/user_enquiries.png)
 #### Users
-Users can submit contact forms and add testimonials that they can view on the testimonials page.]
+Users can submit contact forms and add testimonials that they can view on the testimonials page.
 ![contact](assets/images/contact.png)
 ![contact success](assets/images/contact_success.png)
 ![add testimonial](assets/images/add_testimonial.png)
@@ -403,14 +403,20 @@ Upon clicking submit, the form is submitted and a success message is shown.
 ### Header Responsiveness
 - During development and responsiveness testing, I encountered a bug whereby the main navigation bar was not responsive when the application was loaded and displayed on a mobile. This resulted in the navigation bar not rendering properly, thereby making the UX less than ideal, and causing potential confusion for any users when trying to navigate the website.
 - In order to fix the issue, I had to adjust the CSS class relating to the navigation bar in order to ensure it was responsive and would render correctly on different device displays.
+
+![navbar fix](assets/images/navbar_fix.png)
  
 ### Stripe Payment Completion
 - During development and integration testing, I encountered a bug whereby the Stripe payment was not processing successfully. The payment status was remaining as ‘Incomplete’ and the user was not able to checkout their items. 
 - This issue was due to a typo in the Stripe Secret Key, which is used to authenticate server requests. After correcting the key value and re-compiling and deploying my code, the issue was resolved.
 
+![stripe fix](assets/images/stripe_fix.png)
+
 ### Removing items from basket
 - During development and integration testing, I encountered a bug whereby no action was taken upon clicking the remove item from basket. Therefore, the remove button in the basket was not functional.
 - This issue was due to a typo in the bag.html file, resulting in a mismatch between the button link and the corresponding function. By correcting the typo, the issue was resolved, and the remove button was functional again.
+
+![remove fix](assets/images/remove_fix.png)
 
 ## Models
 ### User
@@ -486,7 +492,7 @@ For this project the built in Django admin page is where the admin approves post
 
 ## Credits
 - All the prepopulated information for excursions and adventures were copied and modified from travel sites. This were Wanderlust, Lonely Planet, Vacation Ideas, The Culture Trip, Travellers WorldWide, The Crazy Tourist and Trip Advisor.
-- All the images used in the advenutre and excursion models were downloaded from google images and I take no credit over them whatsoever.
+- All the images used in the adventure and excursion models were downloaded from google images and I take no credit over them whatsoever.
 - The code institute walkthrough project was used for the bag and checkout and the product model.
 
 
