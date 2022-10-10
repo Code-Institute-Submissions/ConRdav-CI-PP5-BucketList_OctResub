@@ -287,4 +287,10 @@ body {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .display-1 {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 1.0;
+        }
 }
