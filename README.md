@@ -5,15 +5,15 @@ Live deployment for the app here https://ci-pp5-bucketlist.herokuapp.com/
 
 The main objective of the BucketList E-Commerce website is to provide a user-friendly platform for people to search for an adventure that suits them and to be able to purchase the advenutre securely. The target end user is anyone and everyone who is interested in an adventure, and who has a desire to travel and explore new places.
 
-The e-commerce store has functionality that allows the user to add an adventure into a checkout bag, post testimonials, add adventures to a wishlist to save for later, contact us directly for any enquiries. This access thereby permits the user to interact with the forum platform and take part in discussions. End users are able to: 
+The e-commerce store has functionality that allows the user to add an adventure into a checkout bag, post testimonials, add adventures to a Wishlist to save for later, contact us directly for any enquiries. This access thereby permits the user to interact with the forum platform and take part in discussions. End users are able to: 
 
 	- Add a adventure to the checkout bag.
 	- Update their checkout bag.
 	- Purchase a product through stripe payment.
 	- Create, Read, Update and Delete testimonial posts.
-    - Add or remove an adventure from their wishlist.
+    - Add or remove an adventure from their Wishlist.
 
-Additionally, users have access to their profile, which gives them there order history and the ability to save billing information to allow smooth purchases. 
+Additionally, users have access to their profile, which provides them with an order history and the ability to save billing information to allow smooth purchases. 
 
 When users decide to create a post, they are prompted to provide a unique title of their choosing, their post content, and an excerpt to contextualise their post.
 
@@ -45,7 +45,7 @@ The primary goals of the website users are:
 ### User Stories
 The user stories were broken down into epics first which include technical, landing page, adventures, marketing, basket, checkout, testimonials and user profiles.
 These were then broken down into 5 sprints where in each sprint covered 5 days and different user stories.
-Each user story is broken down into their descrition and the acceptance criteria that needed to met for it to have been achieved.
+Each user story is broken down into their description and the acceptance criteria that needed to met for it to have been achieved.
 ![JIRA](assets/images/jira_1.png)
 ![JIRA](assets/images/jira_2.png)
 ![JIRA](assets/images/jira_3.png)
@@ -54,10 +54,10 @@ Login details will be provided to assessor due to inability to share.
 ## Marketing
 ### Search Engine Optimization (SEO)
 SEO is used as a tool for improving the quality and quantity of website traffic to the website targeting unpaid traffic rather than direct traffic or paid traffic.
-WordTracker.com and Google Keyword Tracker were the tools used to help implenting this. The keywords were inputted into these tools to gather the results for which keywords returned the highest traffic and lowest competition ideally.
-Throughout the website SEO tools are implented to increase the traffic to the website. These key words were the inputted into the meta data.
+WordTracker.com and Google Keyword Tracker are the tools used in this website. The keywords were inputted into these tools to gather the results for which keywords returned the highest traffic and lowest competition ideally.
+Throughout the website SEO tools are used to increase the traffic to the website. These key words were the inputted into the meta data.
 ### Marketing Techniques
-A facebook page was created to increase the websites exposure online and imporve traffic to the website. This would allow users to follow the website on social media and gives an unpaid solution to improve marketing.
+A facebook page was created to increase the websites exposure online and improve traffic to the website. This would allow users to follow the website on social media and gives an unpaid solution to improve marketing.
 In addition the website includes a newsletter sign up for for users to keep updated with deals, and new adventure locations.
 Chimp mail was used for this popup and the script included in the header code.![MailChimp](assets/images/mailchimp.png)
 A mockup facebook page can be seen here ![Facebook Page](assets/images/facebook_page.png)
@@ -110,7 +110,7 @@ Wireframes for the site were hand drawn.
 ![wireframe](assets/images/wireframe4.png)
 
 ## Structure 
-### Wesbite Pages
+### Website Pages
 #### Index page non user/admin
 This is the index page the first page users get to when the website is loaded up.
 ![index page](assets/images/index_page.png)
@@ -125,7 +125,7 @@ This is the advenutres page with a filter on it.
 This is the adventures detail page with a link to view the specific excursion for the adventure.
 ![detail](assets/images/adventure_detail.png)
 ![excursion](assets/images/excursions.png)
-#### Authorisaton
+#### Authorisation
 This shows the authorisation pages needed for users to register and sign in and sign out.
 ![sign up](assets/images/sign_up.png)
 ![sign in](assets/images/sign_in.png)
@@ -337,43 +337,43 @@ Upon clicking submit, the form is submitted and a success message is shown.
 
 ### HTML Validation with Official W3C Validator
 ## base.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## index.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## about.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## add_adventure.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## add_excursion.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## adventure_detail.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## adventures.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## edit_adventures.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## excursion_detail.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## bag.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## checkout_success.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## checkout.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## contact.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## profile.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## add_testimonial.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## testimonials.html
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## django-all_auth's login.html edited for uniformity
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## django-all_auth's logout.html edited for uniformity
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## django-all_auth's signup.html edited for uniformity
-* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+* Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 
 ### CSS Validation with Official W3C Validator and Javascript validator
 ![CSSVALIDATION](assets/images/base_css.png)
