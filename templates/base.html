@@ -1,6 +1,6 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   {% endblock %}
 
   {% block extra_css %}
@@ -70,7 +70,7 @@
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           {% if user.is_superuser %}
           <li class="list-inline-item dropdown">
-            <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+            <a class="logo-font nav-link" href="#" id="admin-options" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
                 <div><i class="fas fa-solid fa-lock fa-lg"></i></div>
@@ -124,7 +124,7 @@
     <div class="row main-nav">
       <nav class="navbar navbar-expand-lg navbar-light w-100">
         <button class="navbar-toggler logo-font" type="button" data-toggle="collapse" data-target="#main-nav"
-          aria-controls="main-nav" aria-expanded="false" aria-labelledby="Toggle navigation">
+          aria-controls="main-nav" aria-expanded="false" aria-labelledby="main-nav">
           <span class="navbar-toggler-icon logo-font"></span>
         </button>
         {% include 'includes/mobile-top-header.html' %}
@@ -170,3 +170,4 @@
 </body>
 
 </html>
+
