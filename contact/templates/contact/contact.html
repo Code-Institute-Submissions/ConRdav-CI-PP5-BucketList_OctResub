@@ -28,7 +28,7 @@
                     Your enquiry has been sent successfully!
                 </div>
                 {% else %}
-                <form action="" method="post">
+                <form method="post">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <input type="submit" value="Submit">
