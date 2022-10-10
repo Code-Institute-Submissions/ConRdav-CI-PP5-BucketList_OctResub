@@ -23,10 +23,10 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-">
                         <div class="card-body pb-0">
-                            <p class="mb-1">Country: {{ testimonial.country }}</p>
+                            <p class="card-header text-center text-dark border-dark" >{{ testimonial.country }}</p>
+                            <p class="card-text text-center h4">Comment: {{ testimonial.comment }}</p>
                             <p class="mb-1">User: {{ testimonial.user}}</p>
-                            <p class="mb-1">Comment: {{ testimonial.comment }}</p>
-                            <p class="mb-1">Rating: {{ testimonial.value }} /5</p>
+                            <p class="card-footer h5">Rating: {{ testimonial.value }} /5</p>
                         </div>
                     </div>
                 </div>
