@@ -16,13 +16,13 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if adventure.image %}
-                    <a href="{{ adventure.image }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
-                    </a>
+                <a href="{{ adventure.image }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
+                </a>
                 {% endif %}
             </div>
         </div>
@@ -34,10 +34,10 @@
                 <p class="mb-0">{{ adventure.theme }}</p>
                 <p class="mt-3">{{ adventure.description }}</p>
                 {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_adventure' adventure.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_adventure' adventure.id %}">Delete</a>
-                    </small>
+                <small class="ml-3">
+                    <a href="{% url 'edit_adventure' adventure.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_adventure' adventure.id %}">Delete</a>
+                </small>
                 {% endif %}
                 <form action="{% url 'add_to_bag' adventure.id %}" class="form" method="POST">
                     {% csrf_token %}
@@ -47,16 +47,15 @@
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0" 
+                                        <button class="decrement-qty btn btn-black rounded-0"
                                             data-item_id="{{ adventure.id }}" id="decrement-qty_{{ adventure.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" type="number"
-                                        name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ adventure.id }}"
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ adventure.id }}"
                                         id="id_qty_{{ adventure.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-black rounded-0"
@@ -69,7 +68,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
+                                    value="Add to Bag">
                                 <br>
                                 <a href="{% url 'adventures' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -77,7 +77,8 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'excursion_detail' country=adventure.country %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <a href="{% url 'excursion_detail' country=adventure.country %}"
+                                    class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="text-uppercase">View Excursions</span>
                                     <span class="icon">
                                         <i class="fas fa-chevron-right"></i>
@@ -88,7 +89,7 @@
                         </div>
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </div>

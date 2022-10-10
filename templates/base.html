@@ -2,151 +2,171 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-   
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description"
-            content="With a variety of different adventures to choose from find your ideal
+
+<head>
+
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="With a variety of different adventures to choose from find your ideal
             adventure of a lifetime">
-        <meta name="keywords" content="gap year, adventure, exploration, travel the world" >
+  <meta name="keywords" content="gap year, adventure, exploration, travel the world">
 
-    {% endblock %}
+  {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
-    
-    {% block corecss %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {% endblock %}
 
-    {% block corejs %}
-        <script src="https://kit.fontawesome.com/4e008b4b29.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-        <!-- Stripe  -->
-        <script src="https://js.stripe.com/v3/"></script>  
-        <!-- Mail Chimp -->
-        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b880e11005e399e60015c6bfd/e336d67fab75fd81ada0ce0f5.js");</script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-   {% block extra_js %}
-   {% endblock %}
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/4e008b4b29.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+  </script>
+  <!-- Stripe  -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- Mail Chimp -->
+  <script id="mcjs">
+    ! function (c, h, i, m, p) {
+      m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+    }(document, "script",
+      "https://chimpstatic.com/mcjs-connected/js/users/b880e11005e399e60015c6bfd/e336d67fab75fd81ada0ce0f5.js");
+  </script>
+  {% endblock %}
 
-    <title>Bucket List | Adventures of a Lifetime {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="container-fluid fixed-top">
-      <div id="topnav" class="main-nav row  pt-lg-2 d-none d-lg-flex ">
-        <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
-          <a href="{% url 'index' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font my-0">BucketList <i class="fa-solid fa-bucket"></i></h2>
-          </a>
-        </div>
-        <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            {% if user.is_superuser %}
-              <li class="list-inline-item dropdown">
-              <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="text-center">
-                  <div><i class="fas fa-solid fa-lock fa-lg" ></i></div>
-                  <p class="my-0">Admin</p>
-                </div>
-              </a>
-              <div class="dropdown-menu border-0" aria-labelledby="admin-options">
-                    <a href="{% url 'add_adventure' %}" class="dropdown-item"> Add Adventure</a>
-                    <a href="{% url 'add_excursion' %}" class="dropdown-item"> Add Excursion</a> 
-                    <a href="{% url 'view_contacts' %}" class="dropdown-item"> View Enquiries</a> 
-              </div>             
-            </li>
-            {% endif %}
-            <li class="list-inline-item dropdown">
-              <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="text-center">
-                  <div><i class="fas fa-user fa-lg"></i></div>
-                  <p class="my-0">My Account</p>
-                </div>
-              </a>
-              <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if user.is_authenticated %}
-                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                  {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                  {% endif %}
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>Bucket List | Adventures of a Lifetime {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+  <header class="container-fluid fixed-top">
+    <div id="topnav" class="main-nav row  pt-lg-2 d-none d-lg-flex ">
+      <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <a href="{% url 'index' %}" class="nav-link main-logo-link">
+          <h2 class="logo-font my-0">BucketList <i class="fa-solid fa-bucket"></i></h2>
+        </a>
+      </div>
+      <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          {% if user.is_superuser %}
+          <li class="list-inline-item dropdown">
+            <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="text-center">
+                <div><i class="fas fa-solid fa-lock fa-lg"></i></div>
+                <p class="my-0">Admin</p>
               </div>
-            </li>
-            <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info logo-font font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_bag' %}">
-                <div class="text-center logo-font">
-                  <div><i class=" fas fa-shopping-bag fa-lg"></i></div>
-                  <p class=" my-0">
-                    {% if total %}
-                      ${{ total|floatformat:2 }}
-                    {% else %}
-                      $0.00
-                    {% endif %}
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="admin-options">
+              <a href="{% url 'add_adventure' %}" class="dropdown-item"> Add Adventure</a>
+              <a href="{% url 'add_excursion' %}" class="dropdown-item"> Add Excursion</a>
+              <a href="{% url 'view_contacts' %}" class="dropdown-item"> View Enquiries</a>
+            </div>
+          </li>
+          {% endif %}
+          <li class="list-inline-item dropdown">
+            <a class="logo-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">My Account</p>
+              </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              {% if user.is_authenticated %}
+              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info logo-font font-weight-bold{% else %}{% endif %} nav-link"
+              href="{% url 'view_bag' %}">
+              <div class="text-center logo-font">
+                <div><i class=" fas fa-shopping-bag fa-lg"></i></div>
+                <p class=" my-0">
+                  {% if total %}
+                  ${{ total|floatformat:2 }}
+                  {% else %}
+                  $0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="row main-nav">
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
-          <button class="navbar-toggler logo-font" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-labelledby="Toggle navigation">
-            <span class="navbar-toggler-icon logo-font"></span>
-          </button>
-          {% include 'includes/mobile-top-header.html' %} 
-          {% include 'includes/main-nav.html' %}
-        </nav>
-      </div>
-    </header>
+    <div class="row main-nav">
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <button class="navbar-toggler logo-font" type="button" data-toggle="collapse" data-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-labelledby="Toggle navigation">
+          <span class="navbar-toggler-icon logo-font"></span>
+        </button>
+        {% include 'includes/mobile-top-header.html' %}
+        {% include 'includes/main-nav.html' %}
+      </nav>
+    </div>
+  </header>
 
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-              {% with message.level as level %}
-                {% if level == 40 %}
-                  {% include 'includes/toasts/toasts_error.html' %}
-                {% elif level == 30 %}
-                  {% include 'includes/toasts/toasts_warning.html' %}
-                {% elif level == 25 %}
-                  {% include 'includes/toasts/toasts_success.html' %}
-                {% else %}
-                  {% include 'includes/toasts/toasts_info.html' %}
-                {% endif %}
-              {% endwith %}
-            {% endfor %}
-        </div>
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toasts_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toasts_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toasts_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toasts_info.html' %}
     {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+  {% block page_header %}
+  {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 
-    {% block page_footer %}
-    {% endblock %}
+  {% block page_footer %}
+  {% endblock %}
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
-   
- 
+  {% block postloadjs %}
+  <script type="text/javascript">
+    $('.toast').toast('show');
+  </script>
+  {% endblock %}
+
+
 </body>
+
 </html>

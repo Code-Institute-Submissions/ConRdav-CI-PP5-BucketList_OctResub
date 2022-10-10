@@ -1,20 +1,22 @@
 <li class="list-inline-item">
-{% if user.is_superuser %}
-<a class="logo-font nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <div class="text-center">
-    <div><i class="fas fa-solid fa-lock fa-lg" ></i></div>
-    <p class="my-0">Admin</p>
-  </div>
-</a>
-<div class="dropdown-menu border-0" aria-labelledby="admin-options">
-      <a href="{% url 'add_adventure' %}" class="dropdown-item"> Add Adventure</a>
-      <a href="{% url 'add_excursion' %}" class="dropdown-item"> Add Excursion</a> 
-      <a href="{% url 'view_contacts' %}" class="dropdown-item"> View Enquiries</a> 
-</div>            
-{% endif %}
+    {% if user.is_superuser %}
+    <a class="logo-font nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <div class="text-center">
+            <div><i class="fas fa-solid fa-lock fa-lg"></i></div>
+            <p class="my-0">Admin</p>
+        </div>
+    </a>
+    <div class="dropdown-menu border-0" aria-labelledby="admin-options">
+        <a href="{% url 'add_adventure' %}" class="dropdown-item"> Add Adventure</a>
+        <a href="{% url 'add_excursion' %}" class="dropdown-item"> Add Excursion</a>
+        <a href="{% url 'view_contacts' %}" class="dropdown-item"> View Enquiries</a>
+    </div>
+    {% endif %}
 
 <li class="list-inline-item dropdown logo-font">
-    <a class="logo-font nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="logo-font nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0">My Account</p>
@@ -22,26 +24,26 @@
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-info logo-font font-weight-bold{% else %}{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
+    <a class="{% if grand_total %}text-info logo-font font-weight-bold{% else %}{% endif %} nav-link d-block d-lg-none"
+        href="{% url 'view_bag' %}">
         <div class="text-center logo-font">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">
                 {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
+                ${{ grand_total|floatformat:2 }}
                 {% else %}
-                    $0.00
+                $0.00
                 {% endif %}
             </p>
         </div>
     </a>
 </li>
-

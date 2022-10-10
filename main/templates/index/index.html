@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -13,7 +13,7 @@
 </div>
 {% endblock %}
 
-{% block content %} 
+{% block content %}
 <div class="container h-100">
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
@@ -22,7 +22,8 @@
             </h1>
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'adventures' %}?continent=Africa,Asia,Europe,North_America,Oceania,South_America" class="adventure-btn btn btn-lg rounded-0 text-uppercase py-3">Plan your adventure</a>
+                    <a href="{% url 'adventures' %}?continent=Africa,Asia,Europe,North_America,Oceania,South_America"
+                        class="adventure-btn btn btn-lg rounded-0 text-uppercase py-3">Plan your adventure</a>
                 </h4>
             </div>
         </div>
