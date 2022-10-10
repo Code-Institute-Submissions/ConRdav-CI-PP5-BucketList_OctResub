@@ -5,6 +5,7 @@ from .models import Testimonial
 
 
 class TestimonialAdmin(admin.ModelAdmin):
+    """ view testimonials in admin """ 
     list_display = (
         'country',
         'user',

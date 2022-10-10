@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Continent(models.Model):
-
+    """ continent model """
     class Meta:
         verbose_name_plural = 'Continents'
 
@@ -13,7 +13,7 @@ class Continent(models.Model):
 
 
 class Country(models.Model):
-
+    """ country model """
     class Meta:
         verbose_name_plural = 'Countries'
 
@@ -24,7 +24,7 @@ class Country(models.Model):
 
 
 class Adventure(models.Model):
-
+    """ adventure model """
     continent = models.ForeignKey('Continent', null=True, blank=True,
                                   on_delete=models.SET_NULL)
     country = models.ForeignKey('Country', null=True, blank=True,
@@ -41,7 +41,7 @@ class Adventure(models.Model):
 
 
 class Excursion(models.Model):
-
+    """ excursion model """
     country = models.ForeignKey('Country', null=True, blank=True,
                                 on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)

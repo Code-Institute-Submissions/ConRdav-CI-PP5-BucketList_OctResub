@@ -15,7 +15,7 @@ RATING_CHOICES = (
 
 class Testimonial(models.Model):
     """
-    Model for the testimonial posts 
+    Model for the testimonial posts
     """
 
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
@@ -26,7 +26,7 @@ class Testimonial(models.Model):
     value = models.IntegerField(choices=RATING_CHOICES, default=1)
 
     def __str__(self):
-        return  f'User {self.user} commented {self.comment} '
+        return f'User {self.user} commented {self.comment} '
         f'with a rating of {self.rating}'
 
     class Meta:

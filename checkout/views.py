@@ -1,7 +1,9 @@
 import stripe
 import json
 
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -17,6 +19,7 @@ from bag.contexts import bag_contents
 
 @require_POST
 def cache_checkout_data(request):
+    """ function to cache checkout data """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -33,6 +36,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ checkout function """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -72,8 +76,10 @@ def checkout(request):
 
                 except Adventure.DoesNotExist:
                     messages.error(request, (
-                        "One of the adventure in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
+                        (
+                            "One of the adventure in your bag wasn't found in our database."
+                            )
+                        ("Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))

@@ -26,7 +26,8 @@ def contact(request):
             messages.success(request, 'Thank you for your enquiry!')
             return redirect('contact')
         else:
-            messages.error(request, 'Failed to send enquiry. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to send enquiry. Please ensure the form is valid.'))
     else:
         form = ContactForm()
 

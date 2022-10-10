@@ -385,6 +385,11 @@ Upon clicking submit, the form is submitted and a success message is shown.
 ![JSVALIDATION](assets/images/stripe_element_js.png)Slight issues due to using jquery.
 ![JSVALIDATION](assets/images/country_fields_js.png)Slight issues due to using jquery.
 
+### Python Validation Pep8 and Flake8
+- Pep 8 is currently down so that couldn't be used for validating my python code.
+![Pep8](assets/images/pep8.png)
+- Using flake8 withing the terminal brought up serveral line too long errors which were fixed apart from those from files that weren't created by myself. 
+
 ### LightHouse testing
 
 ## This is the lighthouse testing results for mobile users.

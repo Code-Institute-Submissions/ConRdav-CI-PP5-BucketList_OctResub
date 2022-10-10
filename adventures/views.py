@@ -5,8 +5,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Adventure, Continent, Excursion
 from .forms import AdventureForm, ExcursionForm
 
-# Create your views here.
-
 
 def all_adventures(request):
     """ A view to show all adventures, including sorting and search queries """
@@ -67,7 +65,9 @@ def add_adventure(request):
             messages.success(request, 'Successfully added adventure!')
             return redirect('adventures')
         else:
-            messages.error(request, ('Failed to add adventure. Please ensure the form is valid.'))
+            messages.error(request, (
+                'Failed to add adventure. Please ensure the form is valid.'
+                ))
     else:
         form = AdventureForm()
 
@@ -91,7 +91,9 @@ def edit_adventure(request, adventure_id):
             messages.success(request, 'Successfully updated adventure!')
             return redirect(reverse('adventure_detail', args=[adventure.id]))
         else:
-            messages.error(request, 'Failed to update adventure. please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to update adventure. please ensure the form is valid.'
+                ))
     else:
         form = AdventureForm(instance=adventure)
         messages.info(request, f'You are editing {adventure.name}')
@@ -126,7 +128,9 @@ def add_excursion(request):
             messages.success(request, 'Successfully added an excursion!')
             return redirect('adventures')
         else:
-            messages.error(request, 'Failed to add an excursion. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add an excursion. Please ensure the form is valid.'
+                ))
     else:
         form = ExcursionForm()
 

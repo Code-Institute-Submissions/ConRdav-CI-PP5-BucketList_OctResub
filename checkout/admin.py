@@ -3,11 +3,13 @@ from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInLine(admin.TabularInline):
+    """ order line item for admin """
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    """ order display in admin """
     inlines = (OrderLineItemAdminInLine,)
 
     readonly_fields = ('order_number', 'date',
