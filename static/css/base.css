@@ -103,6 +103,10 @@ body {
     cursor: pointer;
 }
 
+.navbar-light {
+    color: #AC3B61;
+}
+
 /* ----------boostrap toasts */
 
 .message-container {
