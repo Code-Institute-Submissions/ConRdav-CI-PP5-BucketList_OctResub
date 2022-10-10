@@ -23,9 +23,13 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-">
                         <div class="card-body pb-0">
-                            <p class="card-header text-center text-dark border-dark" >{{ testimonial.country }}</p>
-                            <p class="card-text text-center h4">Comment: {{ testimonial.comment }}</p>
-                            <p class="mb-1">User: {{ testimonial.user}}</p>
+                            <h2 class="card-header text-center text-dark border-dark" >{{ testimonial.country }}</h2>
+                            <span>
+                                <p class="mb-1">User: {{ testimonial.user}}</p>
+                            </span>
+                            <span>
+                            <p class="card-text text-center h5">Comment: {{ testimonial.comment }}</p>
+                            </span>
                             <p class="card-footer h5">Rating: {{ testimonial.value }} /5</p>
                         </div>
                     </div>
