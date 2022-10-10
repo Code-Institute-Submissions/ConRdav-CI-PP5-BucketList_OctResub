@@ -336,6 +336,9 @@ The page includes a form, which allows the user to enter their email address, a 
 Upon clicking submit, the form is submitted and a success message is shown.
 
 ### HTML Validation with Official W3C Validator
+# All the html code passes but errors are picked up for using using {{ }} and {% %} syntax which is for Django functionality, and the use of script tags type"text/javascript" throws up a warning but it is the default for HTML 5.
+![HTML](assets/images/html_validator.png)
+
 ## base.html
 * Official W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## index.html
@@ -382,16 +385,13 @@ Upon clicking submit, the form is submitted and a success message is shown.
 ![JSVALIDATION](assets/images/stripe_element_js.png)Slight issues due to using jquery.
 ![JSVALIDATION](assets/images/country_fields_js.png)Slight issues due to using jquery.
 
-## LightHouse testing
-![lighthouse1]()
+### LightHouse testing
 
-![lighthouse2]()
+## This is the lighthouse testing results for mobile users.
+![lighthouseMobile](assets/images/lighthouse_mobile.png)
 
-![lighthouse3]()
-
-![lighthouse4]()
-
-![lighthouse5]()
+## This is the lighthouse testing results for desktop users.
+![lighthouseDesktop](assets/images/lighthouse_desktop.png)
 
 
 ## Bugs Encountered
